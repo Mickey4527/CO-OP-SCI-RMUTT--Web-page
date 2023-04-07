@@ -6,64 +6,6 @@
 	font-family: 'Prompt', sans-serif;
 }
 
-footer{
-	background-color: #3F006A;
-	width: 100%;
-	color: #fff;
-	display: block;
-	height: 140px;
-	font-family: 'Kanit';
-	font-weight: lighter;
-	
-}
-footer .about{
-	float: right;
-	margin-right: 25px;
-	font-family: 'Kanit';
-}
-
-footer .logo{
-	float: left;
-	width: 50%;
-	margin-left: 25px;
-	font-family: 'Kanit';
-}
-footer .logo img{
-	margin: 0px 10px 0px 0px; 
-	width: 70px; 
-	float: left; 
-	height: 70px;
-}
-@media screen and (max-width: 1200px){
-	footer{
-		height: 200px;
-	}
-	footer .logo{
-		width: 80%;
-		font-size: 18px;
-	}
-	footer .about{
-		width: 100%;
-		float: left;
-		margin-left: 0;
-		font-size: 16px;
-		text-align: center;
-	}
-}
-@media screen and (max-width: 810px){
-	footer{
-		height: 250px;
-	}
-	footer .logo{
-		font-size: 14px;
-		width: 90%;
-	}
-	footer .about{
-		width: 90%;
-		font-size: 14px;
-		margin-left: 0;
-	}
-}
 
 .table {
 	text-align: center;
@@ -127,4 +69,13 @@ footer .logo img{
 }
 .carousel-control-prev-icon{
 	background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dropdown-menu{
+	--bs-dropdown-link-active-bg: #172A76 !important;
+
+}
+
+.nav-link{
+	font-weight: 700;
 }

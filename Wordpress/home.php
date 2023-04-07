@@ -2,35 +2,47 @@
    
    <!--Banner=-->
    <div class="container">
-
-<div id="demo" class="carousel slide" data-ride="carousel">
-    <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-    </ul>
+   <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
     <div class="carousel-inner">
-
         <div class="carousel-item active">
-            <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220615-MOU-02-1536x1025.jpg" alt="Los Angeles" width="1400" height="500">
-            <div class="carousel-caption">
-                <h2>Los Angeles</h2>          
-            </div>   
+        <img src="assets/img/img22.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+        </div>
         </div>
         <div class="carousel-item">
-            <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg" alt="Los Angeles" width="1400" height="500">
-            <div class="carousel-caption">
-                <h2>Los Angeles</h2>
-            </div>   
+        <img src="assets/img/img22.jpg" alt="Chicago" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago!</p>
+        </div> 
+        </div>
+        <div class="carousel-item">
+        <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg" alt="New York" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>New York</h3>
+            <p>We love the Big Apple!</p>
+        </div>  
         </div>
     </div>
     
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
-    </a>
-</div>
+    </button>
+    </div>
+
 </div>
     
 
@@ -214,7 +226,7 @@
                 <!--Facebook page-->
                 <article>
                     <h4>ติดตามข่าวสารของเรา</h4>
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%25A1%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2599%25E0%25B8%25AA%25E0%25B8%25B5%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%2599-%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2597%25E0%25B9%258C%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B8%259B%25E0%25B8%2596%25E0%25B8%25B1%25E0%25B8%25A1%25E0%25B8%25A0%25E0%25B9%258C-203455796775101%2F&tabs=timeline&width=295&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="294" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    
                 </article>
 
                 <!--Site-->
@@ -316,37 +328,7 @@
             
             <!--pop up-->
              <!-- The Modal -->
-             <div class="modal active" id="myModal">
-                 <div class="modal-dialog modal-lg">
 
-                     <div class="modal-content">
-                     <!-- Modal Header -->
-                     <div class="modal-header">
-                         <h4 class="modal-title">ประชาสัมพันธ์</h4>
-                         <div type="button" class="close" data-dismiss="modal">&times;</div>
-                    </div>
-        
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <a href="assets/img/model_sk1.jpg">
-                            <img class="imagestyle-f is-center" src="assets/img/model_sk1.jpg" alt="แนวทางจัดการเรียน">
-                        </a>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-            
 
         </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-		</script>

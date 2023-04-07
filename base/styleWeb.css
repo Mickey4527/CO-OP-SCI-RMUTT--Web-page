@@ -302,14 +302,21 @@ h6 {
 .bg-purple{
 	background-color: #720294;
 }
+
+.bg-blue{
+	background-color: #172A76;
+}
 /***********************************************/
 
 /*color*/
 
-.text-purple{
-	color: #773877;
+.text-blue{
+	color: #172A76;
 }
 
+.text-white{
+	color: white !important;
+}
 /***********************************************/
 
 /* header */
