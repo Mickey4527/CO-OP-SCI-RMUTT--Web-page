@@ -302,14 +302,21 @@ h6 {
 .bg-purple{
 	background-color: #720294;
 }
+
+.bg-blue{
+	background-color: #172A76;
+}
 /***********************************************/
 
 /*color*/
 
-.text-purple{
-	color: #773877;
+.text-blue{
+	color: #172A76;
 }
 
+.text-white{
+	color: white !important;
+}
 /***********************************************/
 
 /* header */
@@ -713,4 +720,76 @@ button:focus {
 	  display: block;
   }
 
-  
+
+.table {
+	text-align: center;
+	width: 240px;
+	margin: auto;
+}
+.table th{
+	font-size: 14px;
+	font-weight: 300;
+	background-color: #e7e7e7;
+	line-height: 45px;
+}
+.table td{
+	font-size: 12px;
+	border: 1px solid #e7e7e7;
+	border-radius: 12px;
+	overflow: hidden;
+	line-height: 15px;
+}
+.table img{
+	width: 100%;
+}
+
+
+
+  /*config*/
+
+  .btn:focus {
+	outline: none !important;
+  }
+
+
+  .nav-link{
+
+	  padding: 10px !important;
+
+  }
+
+.dropdown-item{
+
+	line-height: 35px;
+	
+
+}
+.navbar
+{
+	border-bottom: 1px solid rgba(85, 85, 85, 0.281);
+}
+
+.carousel-inner img {
+    max-width: 100%;
+	height: 100%;
+	margin: 10px 0;
+  }
+
+.carousel-caption{
+	background-color: rgba(0, 0, 0, 0.521);
+}
+.carousel-control-next-icon{
+	background-color: rgba(0, 0, 0, 0.521);
+}
+.carousel-control-prev-icon{
+	background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dropdown-menu{
+	--bs-dropdown-link-active-bg: #172A76 !important;
+
+}
+
+.nav-link{
+	font-weight: 700;
+}
