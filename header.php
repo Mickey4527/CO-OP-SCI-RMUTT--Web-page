@@ -4,18 +4,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="base/styleWeb.css">
+      <link rel="stylesheet" type="text/css" href="base/style.css">
       <link rel="stylesheet" type="text/css" href="css/styleWeb1.css">
       <link rel="stylesheet" type="text/css" href="base/icon.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/denali-icon-font/dist/denali-icon-font.css" />
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
       <title>โรงเรียนสีกัน(วัฒนานันท์อุปถัมภ์)</title>
     </head>
 <body>	
 
 <!-- Header -->
 
-<nav class="navbar navbar-expand-xl justify-content-center bg-white navbar-white sticky-top" aria-label="Sixth navbar example">
+<nav class="navbar navbar-expand-xl justify-content-center bg-blur navbar-white sticky-top" aria-label="Sixth navbar example">
     <div class="container-fluid">
 
     <!--Logo-->

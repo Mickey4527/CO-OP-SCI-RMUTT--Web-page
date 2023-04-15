@@ -55,26 +55,45 @@
 	border-bottom: 1px solid rgba(85, 85, 85, 0.281);
 }
 
-.carousel-inner img {
-    max-width: 100%;
+.side-show{
+	height: 65vh;
+}
+
+.card-box-show{
+	height: 550px
+}
+.carousel-item .container-img{
+	width: 100%;
 	height: 100%;
-	margin: 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-item img {
+    width: 100%;
+	height: auto;
+	justify-content: center;
   }
 
 .carousel-caption{
 	background-color: rgba(0, 0, 0, 0.521);
 }
-.carousel-control-next-icon{
-	background-color: rgba(0, 0, 0, 0.521);
-}
-.carousel-control-prev-icon{
-	background-color: rgba(0, 0, 0, 0.521);
-}
 
+@media screen and (max-width: 1200px){
+	.carousel-item.side {
+		height: 55vh;
+	}
+}
+@media screen and (max-width: 980px){
+	.carousel-item.side {
+		height: 40vh;
+	}
+}
 .dropdown-menu{
 	--bs-dropdown-link-active-bg: #172A76 !important;
 
 }
+
 
 .nav-link{
 	font-weight: 700;

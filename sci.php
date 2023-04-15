@@ -13,7 +13,7 @@
 		<div class="box s">
 				<br>
 				<figure>
-					<img src="img/07.jpg">
+					<img src="assets/img/07.jpg">
 				</figure>
 				<div class="content">
 				<h3>นางประนอม สิทธิไกร</h3>
@@ -25,7 +25,7 @@
 			<div class="box">
 				<br>
 				<figure>
-					<img src="img/04.jpg">
+					<img src="assets/img/04.jpg">
 				</figure>
 				<div class="contents">
 				<h3>นางเครือวัลย์ ปลื้มสุข</h3>
@@ -34,7 +34,7 @@
             <div class="box">
 				<br>
 				<figure>
-					<img src="img/11.jpg">
+					<img src="assets/img/11.jpg">
 				</figure>
 				<div class="contents">
 				<h3>Name Surname</h3>
@@ -43,7 +43,7 @@
             <div class="box">
 				<br>
 				<figure>
-					<img src="img/13.jpg">
+					<img src="assets/img/13.jpg">
 				</figure>
 				<div class="contents">
 				<h3>Name Surname</h3>
@@ -52,7 +52,7 @@
             <div class="box">
 				<br>
 				<figure>
-					<img src="img/12.jpg">
+					<img src="assets/img/12.jpg">
 				</figure>
 				<div class="contents">
 				<h3>Name Surname</h3>

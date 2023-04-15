@@ -1,183 +1,190 @@
 
-   
-   <!--Banner=-->
-   <div class="container">
-   <div id="demo" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    </div>
-    
-    <!-- The slideshow/carousel -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="assets/img/img22.jpg" alt="Los Angeles" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-            <h3>Los Angeles</h3>
-            <p>We had such a great time in LA!</p>
-        </div>
-        </div>
-        <div class="carousel-item">
-        <img src="assets/img/img22.jpg" alt="Chicago" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-            <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p>
-        </div> 
-        </div>
-        <div class="carousel-item">
-        <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg" alt="New York" class="d-block" style="width:100%">
-        <div class="carousel-caption">
-            <h3>New York</h3>
-            <p>We love the Big Apple!</p>
-        </div>  
-        </div>
-    </div>
-    
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-    </div>
+<!--Banner=-->
 
-</div>
-    
+    <div class="container">
+        <article>
+            <div id="demo1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
 
-   
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="side-show carousel-item active">
+                        <figure class="container-img">
+                            <img src="assets/img/img22.jpg" alt="Los Angeles">
+                        </figure>
+                        
+                        <div class="carousel-caption">
+                            <h3>Los Angeles</h3>
+                            <p>We had such a great time in LA!</p>
+                        </div>
+                    </div>
+                    <div class="side-show carousel-item">
+                        <figure class="container-img">
+                            <img src="assets/img/img22.jpg" alt="Chicago">
+                        </figure>
+                        
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div> 
+                    </div>
+                    <div class="side-show carousel-item">
+                        <figure class="container-img">
+                            <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg" alt="New York">
+                        </figure>
+                       
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>  
+                    </div>
+                </div>
 
-	<!--Menu bar-->
-
-	<div style="background-color: #720294;">
-    <div class="container t-center">
-        <div class="row">	
-            <section class="main a center">
-                <a href="admission/">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>สมัครเรียน</h2>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>ห้องสมุดดิจิทัล</h2>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>ตารางเรียน</h2>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>อาจารย์ประจำวิชา</h2>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>ตรวจสอบข้อมูลนักเรียน</h2>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>ลงทะเบียนวิชาเลือก</h2>
-                        </div>
-                    </div>
-				</a>
-				<a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">school</i>
-                            <h2>ลงทะเบียนวิชากิจกรรม</h2>
-                        </div>
-                    </div>
-				</a>
-				<a href="">
-                    <div class="mix-card ms-2 is-left bg-white">
-                        <div class="text sm-2">
-                            <i class="material-icons md-48 black200">camera_alt</i>
-                            <h2>Seekan photo</h2>
-                        </div>
-                    </div>
-                </a>
-			</section>
-        </div>
-	</div>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </article>
     </div>
 
+    <script>
+          var carousel = document.getElementById('demo1');
+          carousel.addEventListener('slide.bs.carousel', function () {
+            var activeItem = carousel.querySelector('.active');
+            console.log(activeItem);
+            });
+</script>
     <!--body-->
+
 
     <div class="container">
         <div class="row">
-            <section class="main b">
+            <section class="main a">
 
                 <!--Event-->
+                
                 <article>
-                    <h3>กิจกรรมและข่าวสาร</h3>
-                    <div class="mix-card is-left">
+                    <div class="border-title">
+                        <h2 class="section-title a">ข่าวประชาสัมพันธ์</h2>
+                    </div>           
+                </article>
+                
+                <article>
+
+                <div id="multi-item-carousel" class="carousel slide" data-ride="carousel" >
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#multi-item-carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#multi-item-carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#multi-item-carousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner overflow-hidden">
+    <div class="card-box-show carousel-item active">
+      <div class="row">
+        <div class="col-md-4">
+        <div class="card-box is-left">
+                        <figure class="imagestyle">
+                            <a href=""><img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg"></a>
+                        </figure>
+                        <div class="container">
+                            <span class="date">24 มีนาคม 2565</span>
+                            <div class="title text-blue"><h4><a href="assets/img/img22.jpg">การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</a></h4></div>
+                            <div class="content"><p>We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
+                            </div>
+                        </div>                             
+                    </div>
+                    
+                    
+        </div>
+        <div class="col-md-4">
+        <div class="card-box is-left">
                         <figure class="imagestyle">
                             <img src="assets/img/img22.jpg">
                         </figure>
-                        <div class="text sm-1">
-                            <h2 class="tx-hide">การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</h2>
-                            <p>Text</p>
+                        <div class="container">
+                            <div class="title"><h4>การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</h4></div>
+                            <p class="tx-hide">We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
                         </div>
                     </div>
-                    <div class="mix-card is-left">
+        </div>
+        <div class="col-md-4">
+        <div class="card-box is-left">
                         <figure class="imagestyle">
-                            <img src="assets/img/model_sk1.jpg">
+                            <img src="assets/img/img22.jpg">
                         </figure>
-                        <div class="text sm-1">
-                            <h2 class="tx-hide">Heaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaader</h2>
-                            <p>Text</p>
+                        <div class="container">
+                            <div class="title "><h4>ขอแสดงความยินดีกับสถานประกอบการดีเด่น ผู้ปฏิบัติงานดีเด่น : นักวิจัยที่ปรึกษางานดีเด่น และอาจารย์นิเทศดีเด่น ในงานประกวดสหกิจศึกษาดีเด่น (ระดับมหาวิทยาลัย)ประจำปีการศึกษา 2563</h4></div>
+                            <p class="tx-hide">We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
                         </div>
                     </div>
-                    <div class="mix-card is-left">
+        </div>
+      </div>
+    </div>
+    <div class="card-box-show carousel-item">
+      <div class="row">
+        <div class="col-md-4">
+        <div class="card-box is-left">
                         <figure class="imagestyle">
-                            <img src="assets/img/25046.jpg">
+                            <img src="assets/img/img22.jpg">
                         </figure>
-                        <div class="text sm-1">
-                            <h2 class="tx-hide">Header</h2>
-                            <p>Text</p>
+                        <div class="container">
+                            <div class="title "><h4>ขอแสดงความยินดีกับสถานประกอบการดีเด่น ผู้ปฏิบัติงานดีเด่น : นักวิจัยที่ปรึกษางานดีเด่น และอาจารย์นิเทศดีเด่น ในงานประกวดสหกิจศึกษาดีเด่น (ระดับมหาวิทยาลัย)ประจำปีการศึกษา 2563</h4></div>
+                            <p class="tx-hide">We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
                         </div>
                     </div>
-                    <div class="mix-card is-left">
+        </div>
+        <div class="col-md-4">
+        <div class="card-box is-left">
                         <figure class="imagestyle">
-                            <img src="assets/img/25046.jpg">
+                            <img src="assets/img/img22.jpg">
                         </figure>
-                        <div class="text sm-1">
-                            <h2 class="tx-hide">Header</h2>
-                            <p>Text</p>
+                        <div class="container">
+                            <div class="title "><h4>ขอแสดงความยินดีกับสถานประกอบการดีเด่น ผู้ปฏิบัติงานดีเด่น : นักวิจัยที่ปรึกษางานดีเด่น และอาจารย์นิเทศดีเด่น ในงานประกวดสหกิจศึกษาดีเด่น (ระดับมหาวิทยาลัย)ประจำปีการศึกษา 2563</h4></div>
+                            <p class="tx-hide">We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
                         </div>
                     </div>
-                    <div class="mix-card is-left">
+        </div>
+        <div class="col-md-4">
+        <div class="card-box is-left">
                         <figure class="imagestyle">
-                            <img src="assets/img/25046.jpg">
+                            <img src="assets/img/img22.jpg">
                         </figure>
-                        <div class="text sm-1">
-                            <h2 class="tx-hide">Header</h2>
-                            <p>Text</p>
+                        <div class="container">
+                            <div class="title "><h4>ขอแสดงความยินดีกับสถานประกอบการดีเด่น ผู้ปฏิบัติงานดีเด่น : นักวิจัยที่ปรึกษางานดีเด่น และอาจารย์นิเทศดีเด่น ในงานประกวดสหกิจศึกษาดีเด่น (ระดับมหาวิทยาลัย)ประจำปีการศึกษา 2563</h4></div>
+                            <p class="tx-hide">We aim to drive society to the next level by using technology and innovation, and also 
+                                further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
                         </div>
                     </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev bg-new-left" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon text-black"></span>
+                </button>
+                <button class="carousel-control-next bg-new-right text-black" type="button" data-bs-target="#multi-item-carousel" data-bs-slide="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right text-black" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                </button>
+</div>
+
                 </article>
+
+                <div class="link-box"><a href="">ดูเพิ่มเติม</a></div>
 
                 <!--News-->
                 <article>
@@ -208,123 +215,9 @@
                         <li><a href="">การขอใช้อาคารสถานที่ของโรงเรียนสังกัด สพฐ.</a></li>
                     </ul>
                 </article>
-
-                <!--News kruwandee-->
-                <article>
-                    <h3>ข่าวการศึกษา</h3>
-                    <iframe src="http://kruwandee.com/news_col3.php"  name="main1" width="100%" height="720" scrolling="Yes" frameborder="0" id="main1" ></iframe>
-                </article>
             </section>
 
-            <!--side-->
-            <aside class="side">
-                <!---->
-                <article>
-                    <h4>ปฎิทินโรงเรียน</h4>
-                </article>
-
-                <!--Facebook page-->
-                <article>
-                    <h4>ติดตามข่าวสารของเรา</h4>
-                    
-                </article>
-
-                <!--Site-->
-                <article class="is-center">
-                    <h4>Header</h4>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/ssruic.jpg"  style="width: 100%; height: auto; ">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                            <img src="assets/img/button_myoffice.gif"  style="width: 100%; height: 65px;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/banner_sk.jpg"  style="width: 265px; height: 65px;	margin: auto auto; display: block; ">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/banner_bk2.jpg"   style="width: 265px; height: 65px;	margin: auto auto; display: block; ">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/banner_dlit.jpg"   style="width: 265px; height: 65px;	margin: auto auto; display: block; ">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/banner_plan.jpg"  style="width: 100%; height: 65px;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 65px;">
-                                <img src="assets/img/tc_01.jpg"  style="width: 100%; height: 65px;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 60px;">
-                                <img src="assets/img/tc_02.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 60px;">
-                                <img src="assets/img/tc_03.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_02.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_01.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_06.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_05.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_07.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_03.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/b_04.jpg"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/file_sk.gif"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="mix-card ms-2" style="width: 80%; height: 50px;">
-                                <img src="assets/img/banner_m1.gif"  style="width: 100%; height: auto;">
-                        </div>
-                    </a>
-                </article>
-            </aside>
-
+           
             
             <!--pop up-->
              <!-- The Modal -->
