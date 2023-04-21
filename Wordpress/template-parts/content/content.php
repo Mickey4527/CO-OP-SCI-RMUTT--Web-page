@@ -1,6 +1,6 @@
 <!--Carousel-->
-<div class="container">
-        <article>
+<div class="container-fulid">
+        <article class="mt-0">
             <div id="carousel-homefeed" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel-homefeed" data-bs-slide-to="0" class="active"></button>
@@ -130,24 +130,33 @@
             
             <article>
 
-<?php	// Load posts loop.
-	while ( have_posts() ) : the_post();?>
-                <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <figure class="imagestyle">
-                        <?php the_post_thumbnail(); ?>
-                    </figure>
-                    <div class="container">
-                        <span><?php the_date()?></span>
-                        <div class="title"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></div>
-                        <div class="content"><p><?php the_content(); ?></p>
-                        </div>
-                    </div>   
-                    <footer class="entry-footer">
-                         <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-                    </footer>                          
+<?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 6
+            );
+            $loop = new WP_Query($args);
+            $i = 1; // set a counter for the loop
+
+            while ($loop->have_posts() && $i <= 4) :
+                $loop->the_post(); ?>
+                <div class="col">
+                    <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <figure class="imagestyle">
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                        </figure>
+                        <div class="container">
+                            <span><?php the_date()?></span>
+                            <div class="title"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></div>
+                        </div>   
+                        <footer class="entry-footer">
+                            <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+                        </footer>                          
+                    </div>
                 </div>
 <?php endwhile; ?>
             </article>
+            <?php if( have_posts(  )) : ?><div class="link-box"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
             </section>
         </div>
     </div>

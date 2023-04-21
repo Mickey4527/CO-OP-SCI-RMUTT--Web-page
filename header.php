@@ -19,7 +19,7 @@
     <div class="container-fluid">
 
     <!--Logo-->
-      <a class="navbar-brand" href="#"><img src="assets/img/Logo-RMUTT-A4-stork-5-01.png" width="100px"><span class="text-logo sz-24 text-blue">สหกิจศึกษา</span></a>
+      <a class="navbar-brand" href="#"><img src="assets/img/logo-e1646837687857.png" width="45px"><span class="text-logo sz-24 text-blue">สหกิจศึกษา</span></a>
 
     <!--Menu -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +34,11 @@
         <ul class="navbar-nav me-auto mb-2 mb-xl-0">
 
         <!-- Menu Link -->
-        <li class="nav-item">
-            <a class="nav-link" href="Index.php">หน้าแรก</a> <!--Home-->
+        <li>
+          <span class="nav-item">
+            <a class="nav-link" href="index.php?page=home">หน้าหลัก</a> <!--Home-->
+          </span>
+            
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">เกี่ยวกับโรงเรียน</a> <!--About-->

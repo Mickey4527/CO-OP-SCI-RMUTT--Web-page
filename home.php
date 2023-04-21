@@ -1,8 +1,8 @@
 
 <!--Banner=-->
 
-    <div class="container">
-        <article>
+    <div class="container-fulid">
+        <article class="mt-0">
             <div id="carousel-homefeed" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel-homefeed" data-bs-slide-to="0" class="active"></button>
@@ -142,10 +142,7 @@
                             
                     <div class="container">
                         <span class="date">24 มีนาคม 2565</span>
-                        <div class="title text-blue"><h4><a href="assets/img/img22.jpg">การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</a></h4></div>
-                            <div class="content"><p>We aim to drive society to the next level by using technology and innovation, and also 
-                            further promote Thailand 4.0. The digital world will be built on campus networks, with the future defined by connections between all this.</p>
-                            </div>                                                         
+                        <div class="title text-blue"><h4><a href="assets/img/img22.jpg">การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</a></h4></div>                                                        
                     </div>
                 </div>
             </div>

@@ -9,21 +9,16 @@
     <div class="p-5">
         <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col">
                         <div class="article-header_date"><?php the_date(); ?></div>  
                         <h1><?php the_title(); ?></h1>
                         <div class="article-header_writter">Published by <a href=""><?php the_author(); ?></a></div> 
-                    </div>
-                    <div class="col-md-6">
-                        <!--<figure class="article-header img">
-                            <img src="http://localhost/wordpress/wp-content/uploads/2023/04/338830997_6218417541514602_2890870328874122423_n.png" alt="Chicago">
-                        </figure>-->    
                     </div>
                 </div>
         </div>
     </div>
 
-<article class="bg-white">
+<article class="bg-white rounded-top">
     <div class="container">
         <div class="row">
                 <div class="col p-5">

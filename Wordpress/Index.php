@@ -16,7 +16,7 @@ get_header(); ?>
 if ( have_posts() ) :
 
     // Include the post content template
-    get_template_part( 'template-parts/content/content', 'home' );
+    get_template_part( 'template-parts/content/content');
 
 else :
 	// If no content, include the "No posts found" template.
