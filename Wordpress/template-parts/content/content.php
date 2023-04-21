@@ -141,22 +141,24 @@
             while ($loop->have_posts() && $i <= 4) :
                 $loop->the_post(); ?>
                 <div class="col">
-                    <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <figure class="imagestyle">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                        </figure>
-                        <div class="container">
-                            <span><?php the_date()?></span>
-                            <div class="title"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4></div>
-                        </div>   
-                        <footer class="entry-footer">
-                            <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-                        </footer>                          
-                    </div>
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            <figure class="imagestyle">
+                            <?php the_post_thumbnail(); ?>
+                            </figure>
+                            <div class="container">
+                                <span><?php the_date()?></span>
+                                <div class="title"><h4><?php the_title(); ?></h4></div>
+                            </div>   
+                            <footer class="entry-footer">
+                                <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+                            </footer>                          
+                        </div>
+                    </a>
                 </div>
 <?php endwhile; ?>
             </article>
-            <?php if( have_posts(  )) : ?><div class="link-box"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
+            <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
             </section>
         </div>
     </div>

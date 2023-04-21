@@ -1,4 +1,5 @@
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="bg-white-1">
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="article-header_img">
             <figure>
@@ -17,7 +18,7 @@
                 </div>
         </div>
     </div>
-
+</div>
 <article class="bg-white rounded-top">
     <div class="container">
         <div class="row">

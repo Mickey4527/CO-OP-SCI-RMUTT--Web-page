@@ -1,5 +1,5 @@
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="text-white <?php if ( has_post_thumbnail() ) : echo 'bg-glary-1'; else: echo 'bg-white-1';endif;?>">
+<div class="<?php if ( has_post_thumbnail() ) : echo 'bg-glary-1 text-white'; else: echo 'bg-white-1';endif;?>">
     <div class="p-5">
         <div class="container">
                 <div class="row">

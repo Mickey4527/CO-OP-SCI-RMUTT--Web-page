@@ -146,18 +146,21 @@
                     </div>
                 </div>
             </div>
+
             <div class="col">
-                <div class="card-box is-left">
-                    <figure class="imagestyle">
-                        <a href=""><img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg"></a>
-                    </figure>
-                            
-                    <div class="container">
-                        <span class="date">24 มีนาคม 2565</span>
-                        <div class="title text-blue"><h4><a href="assets/img/img22.jpg">การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</a></h4></div>
-                                                                
+                <a href="assets/img/img22.jpg">
+                    <div class="card-box is-left">
+                        <figure class="imagestyle">
+                         <img src="https://coopsci.rmutt.ac.th/wp-content/uploads/2022/06/20220622-coopsci-01.jpg">
+                        </figure>
+                                
+                        <div class="container">
+                            <span class="date">24 มีนาคม 2565</span>
+                            <div class="title text-blue"><h4>การอบรมวิจัยในชั้นเรียนและกระบวนการส่งเสริมชุมชนแห่งการเรียนรู้ทางการศึกษา</h4></div>                                          
+                        </div>
                     </div>
-                </div>
+                </a>
+                
             </div>
             <div class="col">
                 <div class="card-box is-left">
@@ -187,7 +190,7 @@
            
         </article>
 
-        <div class="link-box"><a href="">ดูเพิ่มเติม</a></div>
+        <div class="link-box mt-5"><a href="">ดูเพิ่มเติม</a></div>
 
             
            
