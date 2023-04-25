@@ -2,7 +2,7 @@
 Theme Name: 	Mix Style
 Theme URI: 		none
 Description: 	test.
-Version: 		0.49.4
+Version: 		0.53.4
 Requires at least: 5.4
 Tested up to:   6.2
 Requires PHP:   8.0.0
@@ -282,7 +282,6 @@ h6 {
 	padding: 0 10px;
 	line-height: 55px;
 	font-weight: 600;
-	border-left: 1.5px solid #773877;/*#773877*/
 }
 
 @media (max-width : 1200px )
@@ -519,7 +518,7 @@ h6 {
 /*card*/
 .card-box{
 	width: 300px;
-	height: 420px;
+	height: 50%;
 	overflow: hidden;
 	border: 1px solid #e7e7e7;
 	background-color: #ffffff;
@@ -952,6 +951,18 @@ button:focus {
 	width : 35px !important;
 	background-clip: content-box;
 	border-radius: 15px;
+}
+.carousel-control-prev, .carousel-control-next
+{
+	transition: width 0.2s ease;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover
+{
+	width: 14%;
+}
+
+.dropdown-menu.show{
+	transition: display 0.5s ease;
 }
 /**backgroud**/
 .bg-side{
