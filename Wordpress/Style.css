@@ -111,7 +111,7 @@ body{
 
 	margin: 0;
 	padding: 0;
-	
+	background-color: initial;
 }
 
 article{
@@ -282,7 +282,6 @@ h6 {
 	padding: 0 10px;
 	line-height: 55px;
 	font-weight: 600;
-	border-left: 1.5px solid #773877;/*#773877*/
 }
 
 @media (max-width : 1200px )

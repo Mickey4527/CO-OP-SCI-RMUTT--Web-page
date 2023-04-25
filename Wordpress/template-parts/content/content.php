@@ -31,14 +31,15 @@
             while ($loop->have_posts() && $i <= 6) {
                 $loop->the_post(); ?>
                 <div class="side-show carousel-item <?php if($i == 1) : echo "active"; endif;?>">
+                    <a href="<?php the_permalink();?>">
                                 <figure class="container-img">
                                     <?php the_post_thumbnail();?>
                                 </figure>
                                     
                             <div class="carousel-caption">
-                                <div class="title"><h3><a href="assets/img/img22.jpg"><?php the_title(); ?></a></h3></div>
+                                <div class="title"><h3><?php the_title(); ?></h3></div>
                             </div>
-
+                            </a>
                             <div class="bg-side"><?php the_post_thumbnail();?></div>
                         </div>
                 <?php
@@ -128,7 +129,7 @@
                 </div>           
             </article>
             
-            <article>
+            <article class="mt-3">
 
 <?php
             $args = array(
@@ -151,6 +152,7 @@
                                 <div class="title"><h4><?php the_title(); ?></h4></div>
                             </div>   
                             <footer class="entry-footer">
+                                <?php edit_post_link(); ?>
                                 <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
                             </footer>                          
                         </div>

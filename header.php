@@ -19,7 +19,7 @@
     <div class="container-fluid">
 
     <!--Logo-->
-      <a class="navbar-brand" href="#"><img src="assets/img/logo-e1646837687857.png" width="45px"><span class="text-logo sz-24 text-blue">สหกิจศึกษา</span></a>
+      <a class="navbar-brand" href="#"><img src="assets/img/logo-e1646837687857.png" width="45px"><span class="text-logo sz-24 text-blue">สหกิจศึกษา<br>คณะวิทยาศาสตร์และเทคโนโลยี</span></a>
 
     <!--Menu -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">

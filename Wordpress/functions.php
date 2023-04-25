@@ -4,6 +4,9 @@
 add_theme_support( 'menus' ); // Enable menus
 add_theme_support( 'custom-header' ); // Enable custom header
 add_theme_support( 'post-thumbnails' ); // Enable post thumbnails
+add_theme_support( 'custom-logo' ); // Enable custom logo
+add_theme_support( 'custom-background' );// Enable custom background
+add_theme_support( 'responsive-embeds' ); // Enable responsive embeds
 
 
 // Enqueueing styles and scripts
@@ -40,4 +43,17 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+function themename_custom_logo_setup() {
+	$defaults = array(
+		'width'                => 100,
+    'height'               => 45,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 ?>
