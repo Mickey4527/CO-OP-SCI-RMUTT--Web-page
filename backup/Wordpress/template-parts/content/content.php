@@ -153,6 +153,7 @@
                             </div>   
                             <footer class="entry-footer">
                                 <?php edit_post_link(); ?>
+                                <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
                             </footer>                          
                         </div>
                     </a>
@@ -160,11 +161,6 @@
 <?php endwhile; ?>
             </article>
             <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
-            <article>
-                <div class="border-title">
-                    <h2 class="section-title a">CWIE</h2>
-                </div>           
-            </article>
             </section>
         </div>
     </div>

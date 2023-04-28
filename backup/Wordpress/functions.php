@@ -13,8 +13,6 @@ add_theme_support( 'responsive-embeds' ); // Enable responsive embeds
 function custom_theme_styles() {
   wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css' );
   wp_enqueue_style( 'custom-style', get_stylesheet_uri() );
-  wp_register_script('main_scripts', get_theme_file_uri('index.js'));
-  wp_enqueue_script('main_scripts');
   wp_enqueue_script( 'bootstrapjsbundlemin', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js' );
 }
 

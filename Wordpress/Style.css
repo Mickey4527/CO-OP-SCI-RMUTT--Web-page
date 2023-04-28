@@ -2,20 +2,18 @@
 Theme Name: 	Mix Style
 Theme URI: 		none
 Description: 	test.
-Version: 		0.53.4
-Requires at least: 5.4
+version: 		0.58.4
+Requires at Lasr: 5.4
 Tested up to:   6.2
-Requires PHP:   8.0.0
+Requires PHP:   7.3
 Author: 		Mick
 Author URI: 	None
 Tags: 			None
-Text Domain: 	None
+Text Domain: 	Mix Style
 License: 		None
 License URI: 	None
-*/
 
-
-/* =Resets and Clearfix
+/*
 -------------------------------------------------------------- */
 
 @charset "utf-8";
@@ -220,6 +218,17 @@ h6 {
 	background-color: rgb(255, 255, 255);
 	
 }
+.bg-organ-1{
+	background-color: #F7644E;
+}
+
+.bg-organ-2{
+	background-color: #CE361F;
+}
+
+.bg-organ-3{
+	background-color: #ffd5ce;
+}
 
 .bg-purple{
 	background-color: #720294;
@@ -229,6 +238,9 @@ h6 {
 	background-color: #172A76;
 }
 
+.bg-blue-2{
+	background-color: #6B86DF;
+}
 .bg-white-1{
 	background-color: #F4F4F4;
 }
@@ -256,6 +268,14 @@ h6 {
 .bg-blue-1{
 	background: linear-gradient(to left, #172A76, #2342BA);
 }
+
+.bg-img-1{
+	background-image: url(assets/img/bg-side-3.png);
+}
+
+.bg-img-2{
+	background-image: url(assets/img/bg-footer.png);
+}
 /***********************************************/
 
 /*color*/
@@ -270,6 +290,10 @@ h6 {
 
 .text-black{
 	color: #000 !important;
+}
+
+.txt-shadow{
+	text-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 /***********************************************/
 
@@ -518,7 +542,7 @@ h6 {
 /*card*/
 .card-box{
 	width: 300px;
-	height: 50%;
+	height: 420px;
 	overflow: hidden;
 	border: 1px solid #e7e7e7;
 	background-color: #ffffff;
@@ -568,6 +592,14 @@ h6 {
 	-webkit-box-orient: vertical;
 }
 
+.card-box .entry-footer{
+	display: block;
+	padding: 0 16px;
+}
+
+.card-box .entry-footer a{
+	display: block;
+}
 
 .card-box.ms-1{
 	width: 320px;	
@@ -691,10 +723,12 @@ h6 {
 	color: #999;
 }
 
+.article-content{
+	font-family: 'Sarabun', sans-serif;
+}
 .article-content p{
 	font-size: 16px;
 	line-height: 1.7;
-	font-family: 'Sarabun', sans-serif;
 }
 
 .article-header_writter{
@@ -856,11 +890,14 @@ button:focus {
   }
 
 
-  .nav-link{
+.nav-item{
+	padding: 0 10px !important;
+}
 
-	  padding: 10px !important;
-
-  }
+.nav-item:hover{
+	transition: 0.3s;
+	font-weight: 600;
+}
 
 .dropdown-item{
 
@@ -871,8 +908,15 @@ button:focus {
 .navbar
 {
 	border-bottom: 1px solid rgba(85, 85, 85, 0.281);
+	font-size: 16px;
+	transition: 0.3s;
 }
 
+.navbar-brand img{
+	width: 120px;
+	height: 70px;
+	transition: 0.3s;
+}
 .side-show{
 	height: 65vh;
 }

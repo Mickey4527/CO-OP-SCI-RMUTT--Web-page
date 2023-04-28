@@ -13,7 +13,7 @@
 
     <div class="container">
       <div class="row">
-        <article>
+          <div class="col">
 
           <?php while ( have_posts() ) :
               
@@ -21,17 +21,15 @@
               
             endwhile; ?>
 
-          </article>
+          
 
-          <article>
-            <?php the_posts_pagination(
-            array(
-              'prev_text' => esc_html__( 'Previous', 'mix style' ),
-              'next_text' => esc_html__( 'Next', 'mix style' ),
-              'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'mix style' ) . ' </span>',
-            )
-          ); ?>
-          </article>
+          <?php the_posts_pagination(
+          array(
+            'prev_text' => esc_html__( 'Previous', 'mix style' ),
+            'next_text' => esc_html__( 'Next', 'mix style' ),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'twentytwentyone' ) . ' </span>',
+          )
+        ); ?>
           </div>
         </div>
     </div>

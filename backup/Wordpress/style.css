@@ -2,13 +2,14 @@
 Theme Name: 	Mix Style
 Theme URI: 		none
 Description: 	test.
-version: 		0.58.4
+version: 		0.53.4
 Requires at Lasr: 5.4
 Tested up to:   6.2
 Requires PHP:   7.3
 Author: 		Mick
 Author URI: 	None
 Tags: 			None
+Tepmplate: 		Twenty Twenty-Three
 Text Domain: 	Mix Style
 License: 		None
 License URI: 	None
@@ -218,17 +219,6 @@ h6 {
 	background-color: rgb(255, 255, 255);
 	
 }
-.bg-organ-1{
-	background-color: #F7644E;
-}
-
-.bg-organ-2{
-	background-color: #CE361F;
-}
-
-.bg-organ-3{
-	background-color: #ffd5ce;
-}
 
 .bg-purple{
 	background-color: #720294;
@@ -238,9 +228,6 @@ h6 {
 	background-color: #172A76;
 }
 
-.bg-blue-2{
-	background-color: #6B86DF;
-}
 .bg-white-1{
 	background-color: #F4F4F4;
 }
@@ -268,24 +255,6 @@ h6 {
 .bg-blue-1{
 	background: linear-gradient(to left, #172A76, #2342BA);
 }
-
-.bg-img-1{
-	background-image: url(../assets/img/bg-side-3.png);
-}
-
-.bg-img-2{
-	background-image: url(../assets/img/bg-footer.png);
-}
-
-.bg-blue-2::before{
-	content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(42, 176, 254, 0.25);
-}
 /***********************************************/
 
 /*color*/
@@ -300,10 +269,6 @@ h6 {
 
 .text-black{
 	color: #000 !important;
-}
-
-.txt-shadow{
-	text-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 /***********************************************/
 
@@ -602,14 +567,6 @@ h6 {
 	-webkit-box-orient: vertical;
 }
 
-.card-box .entry-footer{
-	display: block;
-	padding: 0 16px;
-}
-
-.card-box .entry-footer a{
-	display: block;
-}
 
 .card-box.ms-1{
 	width: 320px;	
@@ -733,12 +690,10 @@ h6 {
 	color: #999;
 }
 
-.article-content{
-	font-family: 'Sarabun', sans-serif;
-}
 .article-content p{
 	font-size: 16px;
 	line-height: 1.7;
+	font-family: 'Sarabun', sans-serif;
 }
 
 .article-header_writter{
@@ -900,14 +855,11 @@ button:focus {
   }
 
 
-.nav-item{
-	padding: 0 10px !important;
-}
+  .nav-link{
 
-.nav-item:hover{
-	transition: 0.3s;
-	font-weight: 600;
-}
+	  padding: 10px !important;
+
+  }
 
 .dropdown-item{
 
@@ -918,15 +870,8 @@ button:focus {
 .navbar
 {
 	border-bottom: 1px solid rgba(85, 85, 85, 0.281);
-	font-size: 16px;
-	transition: 0.3s;
 }
 
-.navbar-brand img{
-	width: 120px;
-	height: 70px;
-	transition: 0.3s;
-}
 .side-show{
 	height: 65vh;
 }

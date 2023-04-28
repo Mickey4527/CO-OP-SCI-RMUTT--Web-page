@@ -1,10 +1,10 @@
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="<?php if ( has_post_thumbnail() ) : echo 'bg-glary-1 text-white'; else: echo 'bg-img-1 text-white';endif;?>">
+<div class="<?php if ( has_post_thumbnail() ) : echo 'bg-glary-1 text-white'; else: echo 'bg-white-1';endif;?>">
     <div class="p-5">
         <div class="container">
                 <div class="row">
-                    <div class="col mt-3 mb-3">
-                        <h1 class="txt-shadow text-center"><?php the_title(); ?></h1>
+                    <div class="col mt-5 mb-5">
+                        <h1 class="text-center"><?php the_title(); ?></h1>
                     </div>
                 </div>
         </div>
