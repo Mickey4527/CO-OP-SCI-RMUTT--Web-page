@@ -2,14 +2,14 @@
   $custom_logo_id = get_theme_mod( 'custom_logo' );
   $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
-<nav class="navbar navbar-expand-xl justify-content-center sticky-top bg-white" aria-label="Sixth navbar example" id="header-navbar">
+<nav class="navbar navbar-expand-xl justify-content-center sticky-top bg-white" aria-label="Sixth navbar example" id="header-navbar" <?php if(! current_user_can( 'administrator' )): echo 'style="top: 0;"'; else: echo 'style="top: 30px;"';endif;?>>
     <div class="container-fluid">
    
     <!--Logo-->
       <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php
       if ( has_custom_logo() ) : echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" id="header-logo" width="120" height="70">'; if (display_header_text()==true) :?><span class="border-start text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span>
       <?php else : if (display_header_text()==true) :?><span class="text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span><?php endif;
-      ?></a>
+      ?><span class="border-start text-logo text-blue">Alpha</span></a>
 
 
     <!--Menu -->
