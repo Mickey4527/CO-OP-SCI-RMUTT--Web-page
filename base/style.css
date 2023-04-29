@@ -277,15 +277,6 @@ h6 {
 	background-image: url(../assets/img/bg-footer.png);
 }
 
-.bg-blue-2::before{
-	content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(42, 176, 254, 0.25);
-}
 /***********************************************/
 
 /*color*/

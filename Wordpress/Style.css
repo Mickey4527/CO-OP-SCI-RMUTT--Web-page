@@ -1,13 +1,13 @@
 /*
 Theme Name: 	Mix Style
-Theme URI: 		none
-Description: 	test.
-version: 		0.58.4
+Theme URI: 		https://github.com/Mickey4527/seekana
+Description: 	สำหรับการทดสอบ
+version: 		0.63.4
 Requires at Lasr: 5.4
 Tested up to:   6.2
 Requires PHP:   7.3
 Author: 		Mick
-Author URI: 	None
+Author URI: 	https://github.com/Mickey4527
 Tags: 			None
 Text Domain: 	Mix Style
 License: 		None
@@ -17,7 +17,7 @@ License URI: 	None
 -------------------------------------------------------------- */
 
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* CSS Document */
 /**/
@@ -25,7 +25,7 @@ License URI: 	None
 /***body***/
 * {
 	box-sizing: border-box;
-	font-family: 'Noto Sans Thai', sans-serif;
+	font-family: 'Kanit', sans-serif;
  }
 
 
@@ -505,12 +505,12 @@ h6 {
 
 .border-title{
 	display: flex;
-	border-bottom: 2px solid #172A76;
+	border-bottom: 3px solid #5D3E36;
 }
 
 .border-title .a{
 	color: #fff;
-    background: #172A76;
+    background: #5D3E36;
     padding: .15em .7em;
 	margin: 0;
     padding-right: 1em;
@@ -551,6 +551,7 @@ h6 {
 	box-sizing: border-box;
 	display: block;
 	transition: 0.3s;
+    word-wrap: break-word;
 }
 
 .card-box:hover{
@@ -558,33 +559,36 @@ h6 {
 }
 
 /*card img(beta)*/
-.card-box .imagestyle{
+.card-box .thumbnail{
 	width: 100%;
-	height: auto;
+	height: 220px;
 }
-.card-box .imagestyle img{
+.card-box .thumbnail img{
 	width: 100%;
-	transition: 0.3s;
+    height: inherit;
+    object-fit: cover;
 }
 
-.card-box .container{
+.card-box .item-contents{
 	padding: 14px 16px;
+	height: 163px;
 }
 
-.card-box .container .date{
+.card-box .item-contents .date{
 	font-size: 1rem;
 	color: #999;
 }
-.card-box .container .title{
+.card-box .item-contents .title{
 	width: auto;
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	margin: 8px 0 0 0;
+	color: #5D3E36;;
 }
 
-.card-box .container .content{
+.card-box .item-contents .content{ 
 	width: auto;
 	overflow: hidden;
 	display: -webkit-box;
@@ -593,8 +597,10 @@ h6 {
 }
 
 .card-box .entry-footer{
-	display: block;
+	display: grid;
 	padding: 0 16px;
+	bottom: 0;
+	position: sticky;
 }
 
 .card-box .entry-footer a{
@@ -612,7 +618,7 @@ h6 {
 	line-height: 24px;
 	border: 0;
 	border-radius: 0;
-	color: #172A76;
+	color: #5D3E36;
 }
 .card-box.ms-2:hover{
 	box-shadow: none;
@@ -724,11 +730,14 @@ h6 {
 }
 
 .article-content{
-	font-family: 'Sarabun', sans-serif;
+	line-height: 1.5;
 }
-.article-content p{
+.article-content a:hover{
+	text-decoration: underline;
+}
+
+.article-content p,.article-content li{
 	font-size: 16px;
-	line-height: 1.7;
 }
 
 .article-header_writter{
@@ -894,10 +903,6 @@ button:focus {
 	padding: 0 10px !important;
 }
 
-.nav-item:hover{
-	transition: 0.3s;
-	font-weight: 600;
-}
 
 .dropdown-item{
 

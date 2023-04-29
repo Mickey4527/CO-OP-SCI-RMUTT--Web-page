@@ -7,12 +7,12 @@
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 6
+                    'posts_per_page' => 5
                 );
                 $loop = new WP_Query($args);
                 $i = 1; // set a counter for the loop
 
-                while ($loop->have_posts() && $i <= 6) { ?>
+                while ($loop->have_posts() && $i <= 5) { ?>
                         <button type="button" data-bs-target="#carousel-homefeed" data-bs-slide-to="<?php echo $i;?>"></button>
                     <?php
                     $i++; // increment the counter
@@ -65,7 +65,7 @@
     <div class="row">	
         <div class="side-menu">
             <div class="col">
-                
+              <a href="https://coopsci.rmutt.ac.th/?page_id=2248">  
                 <div class="card-box ms-2 is-left bg-white text-center">
                     <div class="text sm-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
@@ -75,9 +75,10 @@
                         <div class="title"><h3>ปฎิทินสหกิจศึกษา</h3></div>
                     </div>
                 </div>
+			</a>
             </div>
             <div class="col-sm">
-                <a href="https://coopsci.rmutt.ac.th/">
+                <a href="https://coopsci.rmutt.ac.th/?page_id=1304">
                 <div class="card-box ms-2 is-left bg-white text-center">
                     <div class="text sm-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -134,20 +135,20 @@
 <?php
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 6
+                'posts_per_page' => 4
             );
             $loop = new WP_Query($args);
             $i = 1; // set a counter for the loop
 
-            while ($loop->have_posts() && $i <= 4) :
+               while ($loop->have_posts() && $i <= 4) :
                 $loop->the_post(); ?>
                 <div class="col">
                     <a href="<?php the_permalink(); ?>">
                         <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <figure class="imagestyle">
+                            <div class="thumbnail">
                             <?php the_post_thumbnail(); ?>
-                            </figure>
-                            <div class="container">
+                            </div>
+                            <div class="item-contents">
                                 <span><?php the_date()?></span>
                                 <div class="title"><h4><?php the_title(); ?></h4></div>
                             </div>   
@@ -160,11 +161,17 @@
 <?php endwhile; ?>
             </article>
             <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
-            <article>
-                <div class="border-title">
-                    <h2 class="section-title a">CWIE</h2>
-                </div>           
-            </article>
             </section>
         </div>
     </div>
+<div class="bg-white-1">
+	<div class="container">
+	<div class="row">
+		<div class="col p5 px-5 pt-5 text-center">
+			 <h2 class="display-3">CWIE คืออะไร</h2>
+			<p class="fs-5">CWIE (Cooperative and Work Integrated Education) คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
+			</p>
+		</div>
+	</div>
+</div>
+</div>
