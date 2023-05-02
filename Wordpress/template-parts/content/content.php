@@ -18,6 +18,8 @@
                     $i++; // increment the counter
                 }?>
             </div>
+
+            <!--content-->
             <div class="carousel-inner">
 
             <?php
@@ -30,24 +32,23 @@
 
             while ($loop->have_posts() && $i <= 6) {
                 $loop->the_post(); ?>
-                <div class="side-show carousel-item <?php if($i == 1) : echo "active"; endif;?>">
+                <div class="carousel-item <?php if($i == 1) : echo "active"; endif;?>">
                     <a href="<?php the_permalink();?>">
-                                <figure class="container-img">
-                                    <?php the_post_thumbnail();?>
-                                </figure>
-                                    
-                            <div class="carousel-caption">
-                                <div class="title"><h3><?php the_title(); ?></h3></div>
-                            </div>
-                            </a>
-                            <div class="bg-side"><?php the_post_thumbnail();?></div>
+                        <div class="carousel-thumbnail">
+                            <?php the_post_thumbnail();?>
                         </div>
+                                    
+                        <div class="carousel-caption">
+                            <div class="title"><h3><?php the_title(); ?></h3></div>
+                        </div>
+                    </a>
+                </div>
                 <?php
                 $i++; // increment the counter
             }
-            wp_reset_postdata(); // reset the post data
-?>
+            wp_reset_postdata(); // reset the post data ?>
             </div>
+            
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev bg-onlypre-left" type="button" data-bs-target="#carousel-homefeed" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -57,6 +58,18 @@
             </button>
         </div>
     </article>
+</div>
+
+<div class="bg-white-1">
+	<div class="container  py-5">
+	<div class="row">
+		<div class="col p5 px-5 pt-5 text-center">
+			 <h2 class="display-3 animate__animated animate__fadeInUp">CWIE คืออะไร</h2>
+			<p class="fs-5 animate__animated animate__fadeInUp">CWIE (Cooperative and Work Integrated Education) คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
+			</p>
+		</div>
+	</div>
+</div>
 </div>
 
 <!--Menu-->
@@ -143,20 +156,20 @@
                while ($loop->have_posts() && $i <= 4) :
                 $loop->the_post(); ?>
                 <div class="col">
-                    <a href="<?php the_permalink(); ?>">
+					<a href="<?php the_permalink(); ?>">
                         <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                             <div class="thumbnail">
-                            <?php the_post_thumbnail(); ?>
+								<?php the_post_thumbnail(); ?>
                             </div>
                             <div class="item-contents">
                                 <span><?php the_date()?></span>
-                                <div class="title"><h4><?php the_title(); ?></h4></div>
+								<div class="title"><h4> <?php the_title(); ?></h4></div>
                             </div>   
                             <footer class="entry-footer">
                                 <?php edit_post_link(); ?>
                             </footer>                          
                         </div>
-                    </a>
+					</a>
                 </div>
 <?php endwhile; ?>
             </article>
@@ -164,14 +177,3 @@
             </section>
         </div>
     </div>
-<div class="bg-white-1">
-	<div class="container">
-	<div class="row">
-		<div class="col p5 px-5 pt-5 text-center">
-			 <h2 class="display-3">CWIE คืออะไร</h2>
-			<p class="fs-5">CWIE (Cooperative and Work Integrated Education) คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
-			</p>
-		</div>
-	</div>
-</div>
-</div>

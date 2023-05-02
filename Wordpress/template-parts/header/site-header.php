@@ -9,7 +9,7 @@
       <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php
       if ( has_custom_logo() ) : echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" id="header-logo" width="120" height="70">'; if (display_header_text()==true) :?><span class="border-start text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span>
       <?php else : if (display_header_text()==true) :?><span class="text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span><?php endif;
-      ?><span class="border-start text-logo text-blue">Alpha</span></a>
+      ?></a>
 
 
     <!--Menu -->
