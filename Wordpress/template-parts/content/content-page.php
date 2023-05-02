@@ -4,7 +4,7 @@
         <div class="container">
                 <div class="row">
                     <div class="col mt-3 mb-3">
-                        <h1 class="txt-shadow text-center"><?php the_title(); ?></h1>
+                        <h1 class="txt-shadow text-center animate__animated animate__fadeInUp"><?php the_title(); ?></h1>
                     </div>
                 </div>
         </div>

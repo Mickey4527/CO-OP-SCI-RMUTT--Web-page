@@ -18,8 +18,8 @@
                     $i++; // increment the counter
                 }?>
             </div>
-
-            <!--content-->
+				
+          <!--content-->
             <div class="carousel-inner">
 
             <?php
@@ -42,13 +42,14 @@
                             <div class="title"><h3><?php the_title(); ?></h3></div>
                         </div>
                     </a>
+					<div class="bg-side"><?php the_post_thumbnail();?></div>
                 </div>
                 <?php
                 $i++; // increment the counter
             }
             wp_reset_postdata(); // reset the post data ?>
             </div>
-            
+				
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev bg-onlypre-left" type="button" data-bs-target="#carousel-homefeed" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -61,13 +62,14 @@
 </div>
 
 <div class="bg-white-1">
-	<div class="container  py-5">
+	<div class="container py-5">
 	<div class="row">
 		<div class="col p5 px-5 pt-5 text-center">
-			 <h2 class="display-3 animate__animated animate__fadeInUp">CWIE คืออะไร</h2>
-			<p class="fs-5 animate__animated animate__fadeInUp">CWIE (Cooperative and Work Integrated Education) คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
+			 <h2 class="display-3 animate__animated animate__fadeInUp">CWIE (Cooperative and Work Integrated Education)</h2>
+			<p class="fs-5 animate__animated animate__fadeInUp">คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
 			</p>
 		</div>
+		<div class="link-box mt-5"><a href="https://coopsci.rmutt.ac.th/?page_id=2533">อ่านเพิ่มเติม</a></div>
 	</div>
 </div>
 </div>
@@ -132,6 +134,18 @@
         </div>
 	</div>
 
+<div class="container pt-5">
+	<div class="row">
+		<div class="col">
+			<article>
+                <div class="border-title">
+                    <h2 class="section-title a">ความรู้เกี่ยวกับการทำงาน</h2>
+                </div>           
+            </article>
+		</div>
+	</div>
+</div>
+
 <!--News-->
 <div class="container">
         <div class="row">
@@ -156,24 +170,26 @@
                while ($loop->have_posts() && $i <= 4) :
                 $loop->the_post(); ?>
                 <div class="col">
-					<a href="<?php the_permalink(); ?>">
-                        <div class="card-box is-left" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <div class="thumbnail">
-								<?php the_post_thumbnail(); ?>
-                            </div>
-                            <div class="item-contents">
-                                <span><?php the_date()?></span>
-								<div class="title"><h4> <?php the_title(); ?></h4></div>
-                            </div>   
-                            <footer class="entry-footer">
-                                <?php edit_post_link(); ?>
-                            </footer>                          
-                        </div>
-					</a>
+                      <?php get_template_part( 'template-parts/content/content', 'excerpt' );?>
                 </div>
 <?php endwhile; ?>
             </article>
             <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
+            </section>
+        </div>
+    </div>
+
+
+<div class="container">
+        <div class="row">
+            <section class="main a">
+
+            <article>
+                  <h2 class="section-title a">ลิงก์ที่เกี่ยวข้อง</h2>       
+            </article>
+            
+            <article class="mt-3">
+
             </section>
         </div>
     </div>

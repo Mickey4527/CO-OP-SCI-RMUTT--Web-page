@@ -16,6 +16,7 @@
         <article>
 
           <?php while ( have_posts() ) :
+              the_post();
               
               get_template_part( 'template-parts/content/content', 'excerpt' );
               
@@ -23,7 +24,7 @@
 
           </article>
 
-          <article>
+          <article class="d-inline-block py-5 text-center">
             <?php the_posts_pagination(
             array(
               'prev_text' => esc_html__( 'Previous', 'mix style' ),
