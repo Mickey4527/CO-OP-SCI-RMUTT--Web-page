@@ -14,6 +14,15 @@
       
       endwhile;?>
       </article>
+      <article class="d-inline-block py-5 text-center">
+            <?php the_posts_pagination(
+            array(
+              'prev_text' => esc_html__( 'Previous', 'mix style' ),
+              'next_text' => esc_html__( 'Next', 'mix style' ),
+              'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'mix style' ) . ' </span>',
+            )
+          ); ?>
+      </article>
     </div>
 </div>
 

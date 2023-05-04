@@ -10,8 +10,9 @@ add_theme_support( 'responsive-embeds' ); // Enable responsive embeds
 
 
 // Enqueueing styles and scripts
+
 function custom_theme_styles() {
-  wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css' );
+  wp_enqueue_style( 'bootstrapmin', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
   wp_enqueue_style( 'custom-style', get_stylesheet_uri() );
   wp_register_script('main_scripts', get_theme_file_uri('index.js'));
   wp_enqueue_script('main_scripts');
@@ -58,4 +59,5 @@ function themename_custom_logo_setup() {
 	add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
 ?>

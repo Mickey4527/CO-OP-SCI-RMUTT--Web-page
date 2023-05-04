@@ -26,12 +26,12 @@
     <?php if (has_nav_menu( 'primary' ) ) : 
      wp_nav_menu( array(
       'theme_location'  => 'primary',
-      'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+      'depth'           => 3, 
       'container'       => 'div',
       'container_class' => 'me-auto',
       'menu_class'      => 'navbar-nav me-auto mb-2 mb-xl-0 fw-medium',
-      'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-      'walker'          => new WP_Bootstrap_Navwalker(),
+      'fallback_cb'     => '__return_false',
+      'walker'          => new bootstrap_5_wp_nav_menu_walker(),
       ) 
     );
     endif;?>

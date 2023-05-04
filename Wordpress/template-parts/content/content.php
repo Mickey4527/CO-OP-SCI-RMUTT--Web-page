@@ -61,7 +61,7 @@
     </article>
 </div>
 
-<div class="bg-white-1">
+<div class="bg-coop text-white">
 	<div class="container py-5">
 	<div class="row">
 		<div class="col p5 px-5 pt-5 text-center">
@@ -74,78 +74,13 @@
 </div>
 </div>
 
-<!--Menu-->
+<?php
+	  // Get the ID of a given category
+    $category_id = get_cat_ID( 'ข่าวประชาสัมพันธ์' );
 
-<div class="container">
-    <div class="row">	
-        <div class="side-menu">
-            <div class="col">
-              <a href="https://coopsci.rmutt.ac.th/?page_id=2248">  
-                <div class="card-box ms-2 is-left bg-white text-center">
-                    <div class="text sm-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
-  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-</svg>
-                        <div class="title"><h3>ปฎิทินสหกิจศึกษา</h3></div>
-                    </div>
-                </div>
-			</a>
-            </div>
-            <div class="col-sm">
-                <a href="https://coopsci.rmutt.ac.th/?page_id=1304">
-                <div class="card-box ms-2 is-left bg-white text-center">
-                    <div class="text sm-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-</svg>
-                        <div class="title"><h3>ดาวโหลดแบบฟอร์ม</h3></div>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-sm">
-                <a href="https://coopsci.rmutt.ac.th/">
-                <div class="card-box ms-2 is-left bg-white text-center">
-                    <div class="text sm-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
-  <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"/>
-</svg>
-                        <div class="title"><h3>ขั้นตอนสหกิจศึกษา</h3></div>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="col-sm">
-                <a href="">
-                    <div class="card-box ms-2 is-left bg-white text-center">
-                    <div class="text sm-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
-</svg>
-                        <div class="title"><h3>ภาพกิจกรรม</h3></div>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-        </div>
-	</div>
-
-<div class="container pt-5">
-	<div class="row">
-		<div class="col">
-			<article>
-                <div class="border-title">
-                    <h2 class="section-title a">ความรู้เกี่ยวกับการทำงาน</h2>
-                </div>           
-            </article>
-		</div>
-	</div>
-</div>
-
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+?>
 <!--News-->
 <div class="container">
         <div class="row">
@@ -174,10 +109,87 @@
                 </div>
 <?php endwhile; ?>
             </article>
-            <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
+			
+            <?php if( have_posts(  )) : ?><div class="link-box mt-5"><a href="<?php echo esc_url( $category_link ); ?>">ดูเพิ่มเติม</a></div><?php endif;?>
             </section>
         </div>
     </div>
+
+<div class="bg-white-1">
+	<!--Menu-->
+
+<div class="container">
+    <div class="row">	
+        <div class="side-menu">
+            <div class="col">
+              <a href="https://coopsci.rmutt.ac.th/?page_id=2248">  
+                <div class="card-box ms-2 is-left text-center">
+                    <div class="text sm-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+</svg>
+                        <div class="title"><h3>ปฎิทินสหกิจศึกษา</h3></div>
+                    </div>
+                </div>
+			</a>
+            </div>
+            <div class="col-sm">
+                <a href="https://coopsci.rmutt.ac.th/?page_id=1304">
+                <div class="card-box ms-2 is-left text-center">
+                    <div class="text sm-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg>
+                        <div class="title"><h3>ดาวโหลดแบบฟอร์ม</h3></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://coopsci.rmutt.ac.th/">
+                <div class="card-box ms-2 is-left text-center">
+                    <div class="text sm-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
+  <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"/>
+</svg>
+                        <div class="title"><h3>ขั้นตอนสหกิจศึกษา</h3></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="">
+                    <div class="card-box ms-2 is-left text-center">
+                    <div class="text sm-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+  <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+</svg>
+                        <div class="title"><h3>ภาพกิจกรรม</h3></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        </div>
+	</div>
+
+	<div class="container pt-5">
+	<div class="row">
+		<div class="col">
+			<article>
+                <div class="border-title">
+                    <h2 class="section-title a">ความรู้เกี่ยวกับการทำงาน</h2>
+                </div>           
+            </article>
+		</div>
+	</div>
+</div>
+</div>
+
+
 
 
 <div class="container">
@@ -189,7 +201,35 @@
             </article>
             
             <article class="mt-3">
-
+		
+					<a href="#">
+                        <div class="card-box ms-3">
+                                <img src="assets/img/ssruic.jpg" style="width: 100%; height: auto; ">
+                        </div>
+                    </a>
+		
+					<a href="#">
+                        <div class="card-box ms-3">
+                                <img src="assets/img/ssruic.jpg" style="width: 100%; height: auto; ">
+                        </div>
+                    </a>
+			
+					<a href="#">
+                        <div class="card-box ms-3">
+                                <img src="assets/img/ssruic.jpg" style="width: 100%; height: auto; ">
+                        </div>
+                    </a>
+					<a href="#">
+                        <div class="card-box ms-3">
+                                <img src="assets/img/ssruic.jpg" style="width: 100%; height: auto; ">
+                        </div>
+                    </a>
+				<a href="#">
+                        <div class="card-box ms-3">
+                                <img src="assets/img/ssruic.jpg" style="width: 100%; height: auto; ">
+                        </div>
+                    </a>
+			</article>
             </section>
         </div>
     </div>

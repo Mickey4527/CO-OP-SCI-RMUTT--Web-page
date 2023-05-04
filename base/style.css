@@ -36,6 +36,7 @@ License URI: 	None
 	display: table;
 	margin: 2% auto;
 	padding: 10px;
+	
 
 }
 
@@ -243,6 +244,10 @@ h6 {
 }
 .bg-white-1{
 	background-color: #F4F4F4;
+}
+
+.bg-white-2{
+	background-color: #ECF5FD;
 }
 .bg-onlypre-left{
 	background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
