@@ -1,8 +1,8 @@
 /*
 Theme Name: 	CO-OP SCI RMUTT: Theme
-Theme URI: 		https://github.com/Mickey4527/CO-OP-SCI-RMUTT--Web-page
+Theme URI: 		https://github.com/Mickey4527/seekana
 Description: 	ธีมพิเศษสำหรับการใช้ในเว็บงานสหกิจศึกษา คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราาชมงคลธัญบุรี
-version: 		1.14
+version: 		1.12
 Requires at Lasr: 5.4
 Tested up to:   6.2
 Requires PHP:   7.0
@@ -48,25 +48,74 @@ License URI: 	None
 	font-family: 'Kanit', sans-serif;
  }
 
+
+
+/* side */
+
+.main, .side{
+	display: table;
+	margin: 2% auto;
+	padding: 10px;
+}
+
+
+.side-menu{
+	display: flex;
+}
+.side{
+
+    width: 30%;
+   
+}
+
+
+@media screen and (max-width: 1200px){
+	.side{
+		display: none;
+	}
+	.side-menu{
+		display: inline-flex;
+		overflow: scroll;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+	.c-hide{
+		display: none;
+}
+}
+
+
+/* root */
+
 html{
+
 	font-size: 11pt;
+
 }
 
 @media screen and (max-width: 1680px){
+
 	html{
+
 	    font-size: 11pt;
 	}
+
 }
 
 @media screen and (max-width: 1280px){
+
 	html{
+
 		font-size: 11.5pt;
 	}
+
 }
 
 body{
+
 	margin: 0;
 	padding: 0;
+	
 }
 
 article{
@@ -74,10 +123,11 @@ article{
 	width: 100%;
 	margin: 0;
 }
-
 a {
+
 	text-decoration: none;
 	color: inherit;
+
 }
 p{
 	margin: 0 0 1.0rem 0;
@@ -91,54 +141,58 @@ blockquote{
 }
 
 
-/***body***/
+
+
+
+/***config***/
 /**********************************************/
-.side-menu{
-	display: flex;
+
+/* Float */
+
+.is-left{
+	float: left;
+}
+.is-right{
+	float: right;
 }
 
+/*************************************************/
 
-@media screen and (max-width: 1200px){
-	.side-menu{
-		display: inline-flex;
-		overflow: scroll;
-		overflow-x: scroll;
-		overflow-y: hidden;
-	}
+/* Text Style */
 
-	/**display only for desktop**/
-	.c-hide{
-		display: none;
-	}
+.tx-hide{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap; 
 }
 
-/***bg-color***/
 /***********************************************/
 
+/*bg*/
+
 .bg-coop{
-	background: var(--color-coop-organ-1);
+	background-color: var(--color-coop-organ-1);
 	color: var(--color-coop-light-2) !important;
 }
 
 .bg-coop-1{
-	background: var(--color-coop-organ-2);
-
+	background-color: var(--color-coop-organ-2);
 }
 
 .bg-coop-2{
-	background: var(--color-coop-blue-1);
+	background-color: var(--color-coop-blue-1);
 }
 .bg-coop-3{
-	background: var(--color-coop-organ-3);
+	background-color: var(--color-coop-organ-3);
 }
 .bg-coop-4{
-	background: var(--color-coop-blue-2);
+	background-color: var(--color-coop-blue-2);
 }
 .bg-coop-5{
-	background: var(--color-coop-dark-1);
+	background-color: var(--color-coop-dark-1);
 }
 .bg-coop-6{
-	background: var(--color-coop-organ-4);
+	background-color: var(--color-coop-organ-4);
 }
 
 .bg-coop-7{
@@ -153,14 +207,14 @@ blockquote{
 }
 
 .bg-white-1{
-	background: var(--color-coop-light-1)
+	background-color: var(--color-coop-light-1)
 }
 .bg-onlypre-left{
-	background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .bg-onlynext-right{
-	background: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .bg-blur{
@@ -168,7 +222,7 @@ blockquote{
 }
 
 .bg-glary{
-	background: var(--color-coop-gray-1);
+	background-color: var(--color-coop-gray-1);
 	color: var(--color-coop-light-2) !important;
 }
 
@@ -176,10 +230,9 @@ blockquote{
 	background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,0.5) 0%);
 }
 
-
-/***color***/
 /***********************************************/
 
+/*color*/
 .text-organ{
 	color: var(--color-coop-organ-1) !important;
 }
@@ -203,14 +256,38 @@ blockquote{
 .txt-shadow{
 	text-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+
 .text-coop-1{
 	 background: -webkit-linear-gradient( var(--color-coop-blue-1), var(--color-coop-blue-4));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+/***********************************************/
 
-/***border***/
+
+
+/* header */
+ .text-logo
+{
+	margin: 8px 12px;
+	padding: 0 10px;
+	line-height: 55px;
+	font-weight: 600;
+}
+
+@media (max-width : 1200px )
+{
+    .text-logo{
+		padding: 5px 10px;
+		margin: 5px 25px;
+		font-size: 17px;
+	}
+
+}
+
 /*******************************************************/
+
+/* border */
 
 .border-title{
 	display: flex;
@@ -228,8 +305,7 @@ blockquote{
 	font-size: x-large;
 }
 
-/***link_box***/
-/*******************************************************/
+/**link_box**/
 .link-box{
 	display: flex;
 	flex-direction: column;
@@ -249,8 +325,7 @@ blockquote{
 }
 
 
-/***card***/
-/*******************************************************/
+/*card*/
 .card-box{
 	width: 23%;
 	height: 420px;
@@ -260,22 +335,20 @@ blockquote{
 	display: block;
     word-wrap: break-word;
 }
-/*card full*/
 .card-box.full{
 	width: 100%;
 }
-/*card > div.thumbnail*/
+/*card img(beta)*/
 .card-box .thumbnail{
 	width: 100%;
 	height: 180px;
 }
-/*card > div.thumbnail > img*/
 .card-box .thumbnail img{
 	width: 100%;
     height: inherit;
     object-fit: cover;
 }
-/*card use for text*/
+
 .card-box .item-contents{
 	padding: 14px 16px;
 	height: 163px;
@@ -422,6 +495,7 @@ blockquote{
 }
 
 @media screen and (max-width: 1200px){
+
 	.card-box.ms-2{
 		width: 100%;
 		line-height: 55px;
@@ -449,23 +523,23 @@ blockquote{
 		display:inline-block;
 	}
 	.card-box.type-4 {
-    	width: 100%;
-    	height: 125px;
-	}
+    width: 100%;
+    height: 125px;
+}
 }
 @media screen and (max-width: 400px){
 	.card-box{
 		border: 0;
 		border-radius: 0;
 	}
-
+	
 	.card-box:hover{
 		box-shadow: 0;
 	}
 }
 
-/***header-page***/
 /************************************/
+/**header-page**/
 .header-page{
 	width: 100%;
     height: 255px;
@@ -497,8 +571,8 @@ blockquote{
 	text-shadow: 0 0 10px #000;
 }
 
-/***article-page***/
-/************************************/
+/**article-page**/
+
 .article-header_img{
 	width: 100%;
 	display: flex;
@@ -581,18 +655,14 @@ blockquote{
 		object-fit: cover;
 	}
 }
-
-/***search_form***/
-/************************************/
+/************************/
+/**search**/
 .search-form{
 	position: absolute;
-	top: -80px;
-    transition: 0.3s;
-    z-index: 0;
 }
 
 .search-form .input-group{
-	width: calc(100vw - 30px);
+	width: calc(100vw - 40px);
 	height: 72px;
 	padding: 0 25px;
 }
@@ -602,22 +672,9 @@ blockquote{
 	box-shadow: none;
 }
 
-/***link-page***/
-/************************************/
-.nav-links{
-	width: 100%;
-	display: inline-block;
-}
-.page-numbers{
-	display: inline-block;
-	width: 3.2em;
-	height: 3.2em;
-}
 
-/***config-bootstarp***/
-/************************************/
+/*config*/
 
-/**config->nav-pills**/
 .nav-pills.tab .nav-link.active, .nav-pills.tab .show>.nav-link{
 	background: var(--color-coop-blue-1);
 	color: var(--bs-nav-pills-link-active-color);
@@ -627,22 +684,10 @@ blockquote{
 	color: var(--color-coop-glary-1);
 }
 
-/**config->nav-tabs**/
-.col-sub-menu{
-	display: flex;
-}
-/**config->navbar**/
-.navbar-brand img{
-	width: 100px;
-	height: 55px;
-}
+/*config->navbar*/
 
 .nav-item{
 	margin: 0 10px !important;
-}
-
-.navbar .dropdown-toggle {
-	color: var(--color-coop-glary-1);
 }
 
 .dropdown-toggle::after,
@@ -668,8 +713,14 @@ blockquote{
    rotate: 180deg;
 }
 
+
 .dropdown-item{
 	line-height: 35px;
+}
+
+.navbar-brand img{
+	width: 100px;
+	height: 55px;
 }
 
 .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
@@ -682,32 +733,20 @@ blockquote{
 	border-radius: 0;
 }
 .dropdown .dropdown-submenu.depth_1{
-	position: inherit;
+	position: relative;
 }
 .dropdown .dropdown-submenu {
 	top: 0;
 	margin-left: 0.125rem;
 }
-.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center{
-	position: static;
+
+.navbar .dropdown-item {
+	padding: 0.5rem 1.8rem;
 }
 
-.dropdown-menu[data-bs-popper] {
-    top: 95%;
-	background-clip: inherit;
-}
-
-@media (min-width: 1200px){
-	.navbar-expand-xl .navbar-nav .dropdown-menu {
-		width: 100%;
-	}
-}
-
-/*display dropdown on hover (disable)*/
 .navbar li:hover > ul.dropdown-menu {
     /**display: block;***/
 }
-
 .dropdown-item.active,
 .dropdown-item:active {
 	background-color: var(--color-coop-light-1);
@@ -753,16 +792,10 @@ blockquote{
     border: 0;
 }
 
-.navbar-nav .nav-link.active {
-	border-bottom: 0;
-}
 .card-box-show{
 	height: 550px
 }
 
-
-
-/**config->carousel**/
 .carousel-item{
 	min-height: 84vh;
 	height: 84vh;
@@ -821,15 +854,13 @@ blockquote{
 		height: 65vh !important;
 	}
 }
-
 @media screen and (max-width: 940px){
 	.carousel-item, .carousel-item.full{
 		min-height: 55vh;
 		height: 55vh !important;
 	}
 	.carousel-item .carousel-thumbnail img{
-		width: 100%;
-	}
+	width: 100%;
 }
 	
 @media screen and (max-width: 540px){
@@ -838,12 +869,16 @@ blockquote{
 		height: 32vh !important;
 	}
 }
-.carousel-indicators{
-	display: none;
+	.carousel-indicators{
+		display: none;
+	}
+	.navbar-nav .nav-link.active {
+	border-bottom: 0;
 }
-	
+}
 .dropdown-menu{
 	--bs-dropdown-link-active-bg: #172A76 !important;
+
 }
 
 .carousel-indicators [data-bs-target] {
@@ -853,6 +888,7 @@ blockquote{
 	border-top: 0;
     border-bottom: 0;
 	transition: width 0.2s ease;
+	
 }
 
 .carousel-indicators .active {
@@ -870,26 +906,19 @@ blockquote{
 	width: 14%;
 }
 
-/**animation-carousel**/
 
-.carousel-fade .carousel-inner .item{
-	transition-property: opacity;
-}    
 
-.carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right{
-  	opacity: 0;
+.nav-links{
+	width: 100%;
+	display: inline-block;
 }
-.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right{
-  	opacity: 1;
-}
-
-.carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active{
-   left: 0;
-   transform: translate3d(0, 0, 0);
+.page-numbers{
+	display: inline-block;
+	width: 3.2em;
+	height: 3.2em;
 }
 
-/***backgroud***/
-/************************************/
+/**backgroud**/
 .bg-side{
 	width: 100%;
 	height: 100%;
@@ -907,16 +936,47 @@ blockquote{
 	object-fit: cover;
 }
 
-/***animation***/
-/************************************/
 .reveal{
-  	position: relative;
-  	transform: translateY(150px);
-  	opacity: 0;
-  	transition: 0.8s all ease;
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.8s all ease;
 }
 
 .reveal.active{
-  	transform: translateY(0);
-  	opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.carousel-fade .carousel-inner .item{
+      transition-property: opacity;
+ }    
+
+.carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right{
+	opacity: 0;
+}
+.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right{
+	opacity: 1;
+}
+
+.carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active{
+	 left: 0;
+     transform: translate3d(0, 0, 0);
+}
+
+.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center{
+	position: static;
+}
+@media (min-width: 1200px){
+.navbar-expand-xl .navbar-nav .dropdown-menu {
+    width: 100%;
+}
+}
+.dropdown-menu[data-bs-popper]{
+	top: 95%;
+}
+
+.dropdown-item{
+	font-weight: 600;
 }

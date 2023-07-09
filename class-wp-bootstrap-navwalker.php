@@ -31,7 +31,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $indent = str_repeat("\t", $depth);
     // CSDEV changed sub-menu  for dropdown-submenu
     $submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
+    $output .= "\n$indent<ul class=\"animate__animated animate__fadeIn dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n<div class=\"container col-sub-menu\">\n";
   }
 
   /**
@@ -51,9 +51,10 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $classes[] = ($args->walker->has_children) ? 'dropdown' : '';
     $classes[] = 'nav-item';
     $classes[] = 'nav-item-' . $item->ID;
-    // CSDev added dropdown-menu-child-item & at_depth classes
+
+    // เพิ่ม class ให้กับ li ที่มี dropdown
     if ($depth && $args->walker->has_children) {
-      $classes[] = 'dropdown-menu-child-item dropdown-menu-end at_depth_'.$depth;
+      $classes[] = 'col-md-3 dropdown-menu-child-item dropdown-menu-end at_depth_'.$depth;
     }
 
     $class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));

@@ -1,13 +1,23 @@
-window.onscroll = function() {scrollFunction()};
+function search(){
+	document.getElementById("search").style.top = "0";
+}
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header-navbar").style.fontSize = "14px";
-    document.getElementById("header-logo").style.width = "80px";
-	 document.getElementById("header-logo").style.height = "45px";
-  } else {
-    document.getElementById("header-navbar").style.fontSize = "16px";
-	 document.getElementById("header-logo").style.width = "120px";
-	 document.getElementById("header-logo").style.height = "70px";
+function closesearch(){
+	document.getElementById("search").style.top = "-80px";
+}
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
   }
 }
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();

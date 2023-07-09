@@ -1,30 +1,27 @@
-<?php get_header(); ?>
+<?php get_header();
+  if ( have_posts() ) : ?>
 
-
-    <?php if ( have_posts() ) : ?>
-
-    <div class="container mt-2">
-      <div class="row">
-        <div class="col">
-            <h1><?php printf( esc_html__( 'Search Results for: %s', 'mix style' ), '<span>"' . get_search_query() . '"</span>' ); ?></h1>
-        </div>
+  <div class ="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <?php get_search_form(); ?>
       </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <article>
-
-          <?php while ( have_posts() ) :
+      <div class="col-md-12">
+            <h1><?php printf( esc_html__( 'Search Results for: %s', 'mix style' ), '<span>"' . get_search_query() . '"</span>' ); ?></h1>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+        <?php while ( have_posts() ) :
               the_post();
-              
-              get_template_part( 'template-parts/content/content', 'excerpt' );
-              
-            endwhile; ?>
-
-          </article>
-
-          <article class="d-inline-block py-5 text-center">
+              ?>
+              <div class="col-md-3">
+              <?php get_template_part( 'template-parts/content/content', 'excerpt' );
+              ?>
+              </div>
+              <?php endwhile; ?>
+          </div>
+        </div>
+        <article class="d-inline-block py-5 text-center">
             <?php the_posts_pagination(
             array(
               'prev_text' => esc_html__( 'Previous', 'mix style' ),
@@ -33,16 +30,8 @@
             )
           ); ?>
           </article>
-          </div>
-        </div>
-    </div>
-
-    <?php else : ?>
-
-      <?php get_template_part( 'template-parts/content/content', 'none' ); ?>
-
-    <?php endif; ?>
-
-
+          <?php else : get_template_part( 'template-parts/content/content', 'none' ); endif; ?>
+      </div>
+  </div>
 
 <?php get_footer(); ?>
