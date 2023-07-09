@@ -5,6 +5,7 @@ function search(){
 function closesearch(){
 	document.getElementById("search").style.top = "-80px";
 }
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
   for (var i = 0; i < reveals.length; i++) {
