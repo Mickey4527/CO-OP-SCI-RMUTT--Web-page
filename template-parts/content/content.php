@@ -54,7 +54,7 @@
         </div>
 	</div>
 
-
+<!--CWIE-->
 <div class="container-xxl mb-5">
 	<div class="row row-cols-1 row-cols-sm-2 align-items-center justify-content-center py-2">
 		<div class="col-10 col-sm-8 col-lg-6">
@@ -156,7 +156,7 @@
 </div>
 
 <!--video-->
-<?php get_template_part( 'template-parts/content/content-widget' ); ?>
+<?php //get_template_part( 'template-parts/content/content-widget' ); <= disable default ?>
 
 
 <div class="container my-1">

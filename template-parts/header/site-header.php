@@ -1,30 +1,38 @@
 <?Php
+// config logo
   $custom_logo_id = get_theme_mod( 'custom_logo' );
-  $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+  $logo           = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
-<nav class="bg-coop-9 text-white c-hide z-3 position-relative">
+<!--secondary menu-->
+<nav class="bg-gradient-organ-royal text-white c-hide z-3 position-relative">
     <div class="container d-flex flex-wrap align-items-center">
-		<?php  if (display_header_text()==true) :?><span class="text-logo text-white"><?php bloginfo( 'name' ); endif;?></span>
-		<?php if (has_nav_menu( 'secondary' ) ) : 
-		 wp_nav_menu( array(
-		  'theme_location'  => 'secondary',
-		  'depth'           => 3, 
-		  'container'       => 'div',
-		  'container_class' => 'ms-auto',
-		  'menu_class'      => 'navbar-nav secondary me-auto',
-		  'fallback_cb'     => '__return_false',
-		  'walker'          => new bootstrap_5_wp_nav_menu_walker(),
-		  ) 
-		);
-		endif;?>
+		<?php 
+    // if enable header text
+      if (display_header_text()==true) : echo '<span class="text-logo text-white">'.bloginfo( 'name' ).'</span>'; endif;
+		// if enable secondary menu
+      if (has_nav_menu( 'secondary' ) ) : 
+
+		    wp_nav_menu( array(
+		                    'theme_location'  => 'secondary',
+		                    'depth'           => 3, 
+		                    'container'       => 'div',
+		                    'container_class' => 'ms-auto',
+		                    'menu_class'      => 'navbar-nav secondary me-auto',
+		                    'fallback_cb'     => '__return_false',
+		                    'walker'          => new bootstrap_5_wp_nav_menu_walker(),
+                        ) 
+                      );
+        endif;?>
     </div>
  </nav>
 
+ <!--primary menu-->
 <nav class="navbar bg-white navbar-expand-xl text-dark" aria-label="navbarPrimary" id="header-navbar">
 	<div class="container">
     <!--Logo-->
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
 		  <?php
+      //if have logo
       		if ( has_custom_logo() ) : echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" loading="lazy">'; endif;?>
       </a>
 
@@ -61,11 +69,5 @@
             </a>
       <?php endif;?>
       </div>
-        <?php if(!is_search()): get_search_form(); endif; ?>
+      <?php if(!is_search()): get_search_form(); endif; ?>
   </nav>
-
-  /*dev */
-  <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php
-      if ( has_custom_logo() ) : echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" loading="lazy"'; if (display_header_text()==true) :?><span class="border-start text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span>
-      <?php else : if (display_header_text()==true) :?><span class="text-logo sz-24 text-blue"><?php bloginfo( 'name' ); endif;?></span><?php endif;
-      ?></a>
