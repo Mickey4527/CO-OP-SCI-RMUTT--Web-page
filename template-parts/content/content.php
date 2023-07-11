@@ -14,7 +14,7 @@
 </div>
 
 <!--Menu-->
-<div class="container-xxl mt-5">
+<div class="container-xxl p-4">
     <div class="row">	
         <div class="side-menu ps-5">
             <?php
@@ -31,7 +31,7 @@
                         'icon' => 'bi bi-download'
                     ),
                     'manual_coop' => array(
-                        'title' => 'คู่มือนักศึกษา',
+                        'title' => 'คู่มือนักศึกษาและอาจารย์',
                         'link' => 'https://coopsci.rmutt.ac.th/?page_id=3126',
                         'icon' => 'bi bi-book'
                      ),
@@ -39,6 +39,11 @@
                         'title' => 'ข้อมูลสถานประกอบการ',
                         'link' => 'https://lookerstudio.google.com/s/uvbljH9fO_U',
                         'icon' => 'bi bi-pie-chart-fill'
+                    ),
+                    'e-porfolio' => array(
+                        'title' => 'E-Porfolio นักศึกษา',
+                        'link' => 'https://www.oreg.rmutt.ac.th/?page_id=9968',
+                        'icon' => 'bi bi-file-earmark-person-fill'
                     ),
                     // template for add new menu
                     // 'menu_name' => array(
@@ -90,6 +95,17 @@
 
       <div class="col-md-12 mt-3 mb-5">
             <div class="row">
+            <?php 
+                // config the carousel
+                $cat_set = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                    'cat' => $category_id // <= Default is all categories. Delete comment to specify a category
+                );
+                
+                // you can edit the carousel_feed function in inc/news_feed.php
+                echo carousel_feed('homefeed', $cat_set);
+    ?>
                 <?php
                 $args = array(
                     'post_type' => 'post',
