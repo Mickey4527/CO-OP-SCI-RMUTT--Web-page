@@ -36,7 +36,7 @@
                         'icon' => 'bi bi-book'
                      ),
                     'data_coop' => array(
-                        'title' => 'ข้อมูลสถานประกอบการ',
+                        'title' => 'ฐานข้อมูลสถานประกอบการ',
                         'link' => 'https://lookerstudio.google.com/s/uvbljH9fO_U',
                         'icon' => 'bi bi-pie-chart-fill'
                     ),
@@ -104,7 +104,7 @@
                 );
                 
                 // you can edit the carousel_feed function in inc/news_feed.php
-                echo carousel_feed('homefeed', $cat_set);
+                echo carousel_feed('newsfeed', $cat_set);
     ?>
                 <?php
                 $args = array(

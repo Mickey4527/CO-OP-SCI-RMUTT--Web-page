@@ -1,5 +1,5 @@
 <?php get_header(); 
-include get_template_directory() . '/template-parts/content/content-list.php';
+include get_template_directory() . '/template-parts/content/content-search.php';
 ?>
 
 <div class ="container-fluid py-5 border-bottom border-2">

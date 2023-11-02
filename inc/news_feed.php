@@ -10,7 +10,6 @@ function carousel_feed($id, $cat_set) {
     //config values
     $loop = new WP_Query($cat_set);
     $post_per_page = $loop->post_count;
-    
 
     //Indicators loop
     $indicators = '<button type="button" data-bs-target="#carousel-'.$id.'" data-bs-slide-to="0" class="active"></button>';
@@ -20,17 +19,27 @@ function carousel_feed($id, $cat_set) {
 
     //Content loop
     $content_inner = '';
-    for($i = 1; $loop->have_posts() && $i <= 6 ; $i++) {
-        $loop->the_post(); 
-        $content_inner .= '<div class="carousel-item '.($i == 1 ? "active" : "").'">
-                        <a href="'.get_the_permalink().'">
-                            <div class="carousel-thumbnail">'.get_the_post_thumbnail().'</div>
-                        </a>
-                        <div class="bg-side">'.get_the_post_thumbnail().'</div>
-                    </div>';
-        wp_reset_postdata(); 
-    }
 
+    if($loop->post_count == 0) {
+        $content_inner .= '<div class="carousel-item active">
+        <a href="#">
+            <div class="carousel-thumbnail"></div>
+        </a>
+        <div class="bg-side"></div>
+        </div>';
+    }
+    else{
+        for($i = 1; $loop->have_posts() && $i <= 6 ; $i++) {
+            $loop->the_post(); 
+            $content_inner .= '<div class="carousel-item '.($i == 1 ? "active" : "").'">
+                            <a href="'.get_the_permalink().'">
+                                <div class="carousel-thumbnail">'.get_the_post_thumbnail().'</div>
+                            </a>
+                            <div class="bg-side">'.get_the_post_thumbnail().'</div>
+                        </div>';
+            wp_reset_postdata(); 
+        }
+    }
     //show carousel
     $indicators = '<div class="carousel-indicators">'. $indicators.'</div>';
     $content_inner = '<div class="carousel-inner">'.$content_inner.'</div>';

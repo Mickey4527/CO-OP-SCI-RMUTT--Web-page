@@ -43,6 +43,9 @@ License URI: 	None
 	--color-coop-light-1: #F4F4F4;
 	--color-coop-light-2: #fff;
 	--color-coop-gray-1: #2B2B2B;
+	--color-green-primary: #338533;
+	--color-green-secondary: #589C33;
+	--color-green-tertiary: #309167;
 
 	/**config animation**/
   	--animate-duration: 400ms;
@@ -121,6 +124,18 @@ License URI: 	None
 }
 .bg-gradient-glary{
 	background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,0.5) 0%);
+}
+.bg-green-1{
+	background: var(--color-green-primary) !important;
+	color: var(--color-coop-light-2) !important;
+}
+.bg-green-2{
+	background: var(--color-green-secondary) !important;
+	color: var(--color-coop-light-2) !important;
+}
+.bg-green-3{
+	background: var(--color-green-tertiary) !important;
+	color: var(--color-coop-light-2) !important;
 }
 
 /**********************************************/
