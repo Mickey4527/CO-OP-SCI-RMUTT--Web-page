@@ -19,6 +19,7 @@ License URI: 	None
 /* CSS Document */
 /** import bootstrap icons and font : kanit and sarabun**/
 @charset "utf-8";
+@import "node_modules/animate.css/animate.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
@@ -30,22 +31,16 @@ License URI: 	None
 /***********************************************/
 
 :root{
-	--color-organ-primary: #D45413;
-	--color-organ-secondary: #EB8322;
-	--color-organ-tertiary: #F39D1E;
-	--color-royal-primary: #030B47;
-	--color-royal-secondary: #0935AB;
-	--color-teal-primary: #005F73;
-	--color-teal-tertiary: #007E9E;
-	--color-teal-secondary: #21C1EB;
-	--color-coop-dark-1: #162038;
-	--color-coop-dark-2: #000;
-	--color-coop-light-1: #F4F4F4;
-	--color-coop-light-2: #fff;
-	--color-coop-gray-1: #2B2B2B;
-	--color-green-primary: #338533;
-	--color-green-secondary: #589C33;
-	--color-green-tertiary: #309167;
+	--color-blue-1: #2B6B90;
+	--color-organ-400: #f49243;
+	--color-organ-500: #f1741e;
+	--color-organ-600: #d45413;
+	--color-organ-700: #bb4313;
+	--color-organ-800: #953617;
+
+	--color-dark-900: #333333;
+	--color-dark-950: #262626;
+	--color-dark-600: #5d5d5d;
 
 	/**config animation**/
   	--animate-duration: 400ms;
@@ -58,133 +53,51 @@ License URI: 	None
 /*                                             */
 /***********************************************/
 
-/***              border-color               ***/
-/***********************************************/
-.border-organ{
-	border-color: var(--color-organ-secondary) !important;
+.bg-organ-400{
+	background-color: var(--color-organ-400);
 }
-
-/***            Background color             ***/
-/***********************************************/
-.bg-royal{
-	background: var(--color-royal-primary) !important;
-	color: var(--color-coop-light-2) !important;
+.bg-organ-500{
+	background-color: var(--color-organ-500);
 }
-
-.bg-organ-1{
-	background: var(--color-organ-primary) !important;
-	color: var(--color-coop-light-2) !important;
+.bg-organ-600{
+	background-color: var(--color-organ-600);
 }
-.bg-organ-2{
-	background: var(--color-organ-secondary)  !important;
-	color: var(--color-coop-light-2) !important;
+.bg-organ-700{
+	background-color: var(--color-organ-700);
 }
-
-.bg-organ-3{
-	background: var(--color-organ-tertiary) !important;
-	color: var(--color-coop-light-2) !important;
+.bg-organ-800{
+	background-color: var(--color-organ-800);
 }
-
-.bg-teal-1{
-	background: var(--color-teal-primary) !important;
-	color: var(--color-coop-light-2) !important;
-}
-
-.bg-teal-2{
-	background: var(--color-teal-secondary) !important;
-}
-
-.bg-teal-3{
-	background: var(--color-teal-tertiary) !important;
-	color: var(--color-coop-light-2) !important;
-}
-
 .bg-dark-1{
-	background: var(--color-coop-dark-1) !important;
+	background-color: var(--color-dark-1);
+}
+.bg-dark-2{
+	background-color: var(--color-dark-2);
 }
 
-.bg-white-1{
-	background: var(--color-coop-light-1)  !important;
+.text-organ-400{
+	color: var(--color-organ-400);
 }
-
-.bg-glary{
-	background: var(--color-coop-gray-1) !important;
-	color: var(--color-coop-light-2) !important;
+.text-organ-500{
+	color: var(--color-organ-500);
 }
-
-.bg-gradient-teal-royal{
-	background: -webkit-linear-gradient( var(--color-teal-tertiary), var(--color-royal-secondary)) !important;
+.text-organ-600{
+	color: var(--color-organ-600);
 }
-
-.bg-gradient-organ{
-	background: -webkit-linear-gradient( var(--color-organ-primary), var(--color-organ-secondary)) !important;
+.text-organ-700{
+	color: var(--color-organ-700);
 }
-.bg-gradient-organ-royal{
-	background: linear-gradient(120deg, var(--color-organ-primary) 0%, var(--color-royal-primary) 100%) !important;
+.text-organ-800{
+	color: var(--color-organ-800);
 }
-.bg-gradient-glary{
-	background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(0,0,0,0.5) 0%);
+.text-dark-1{
+	color: var(--color-dark-1);
 }
-.bg-green-1{
-	background: var(--color-green-primary) !important;
-	color: var(--color-coop-light-2) !important;
+.text-dark-2{
+	color: var(--color-dark-2);
 }
-.bg-green-2{
-	background: var(--color-green-secondary) !important;
-	color: var(--color-coop-light-2) !important;
-}
-.bg-green-3{
-	background: var(--color-green-tertiary) !important;
-	color: var(--color-coop-light-2) !important;
-}
-
-/**********************************************/
-/**         component background             **/
-.bg-onlypre-left{
-	background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.bg-onlynext-right{
-	background: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.bg-blur{
-	filter: blur(40px) !important;
-}
-
-/************************************************/
-
-
-/***            text color                   ***/
-/***********************************************/
-
-.text-organ{
-	color: var(--color-organ-secondary) !important;
-}
-.text-organ-2{
-	color: var(--color-organ-primary) !important;
-}
-.text-blue{
-	color: var(--color-teal-primary) !important;
-}
-.text-glary{
-	color: var(--color-coop-gray-1) !important;
-}
-.text-white{
-	color: var(--color-coop-light-2) !important;
-}
-
-.text-black{
-	color: var(--color-coop-dark-2) !important;
-}
-
-.txt-shadow{
-	text-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-}
-.text-coop-1{
-	 background: -webkit-linear-gradient( var(--color-teal-tertiary), var(--color-royal-secondary));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.text-dark-600{
+	color: var(--color-dark-600);
 }
 
 /***********************************************/
@@ -192,129 +105,187 @@ License URI: 	None
 /*                config css               	   */
 /*                                             */
 /***********************************************/
-
-/***                  root                   ***/
-/***********************************************/
-* {
-	box-sizing: border-box;
-	font-family: 'Kanit', sans-serif;
- }
-
-html{
-	font-size: 11pt;
-}
-
-body{
+*{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Kanit', sans-serif;
+
 }
 
-article{
-	display: table;
-	width: 100%;
-	margin: 0;
+html{
+	scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: var(--color-dark-2);
 }
 
 a{
 	text-decoration: none;
-	color: inherit;
-}
-p{
-	margin: 0 0 1.0rem 0;
-	line-height: 1.85;
-}
-
-blockquote{
-	border-left: 2px solid #000000;
-	padding-left: 1rem;
-	font-weight: 700;
-}
-
-@media screen and (max-width: 1680px){
-	html{
-	    font-size: 11pt;
-	}
-}
-
-@media screen and (max-width: 1280px){
-	html{
-		font-size: 11.5pt;
-	}
 }
 
 
-/***                  body                   ***/
-/***********************************************/
-.main, .side{
-	display: table;
-	margin: 2% auto;
-	padding: 10px;
+.navbar-primary{
+	height: 6rem;
+	background: linear-gradient(180deg, rgba(51,51,51,0.6) 0%, rgba(255,255,255,0) 100%);
+	z-index: 1000;
 }
+.banner{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.banner::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-organ-500);
 
-.side-menu{
+}
+.banner::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(360deg, rgba(51,51,51,0.6) 0%, rgba(255,255,255,0) 40%);
+
+}
+.banner .banner-content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
-
-@media screen and (max-width: 1280px){
-	.side-menu{
-		flex-wrap: nowrap;
-		overflow: scroll;
-		overflow-x: scroll;
-		overflow-y: hidden;
-	}
-
-	/**display only for desktop**/
-	.mobile-hide{
-		display: none !important;
-	}
+.banner .text{
+	z-index: 2;
 }
 
+.banner .text :where(h1,p){
+	margin: 0 0 10px 0;
+	color: #fff !important;
+}
+.banner .item{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    top: calc(15% + 2vh);
+	z-index: 1;
+}
+.banner .link a{
+	display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    border-radius: 24px;
+    border: 1px #fff solid;
+	text-decoration: none;
+	transition: 0.2s;
+}
+.banner .link a:hover{
+	background-color: var(--color-dark-900);
+	border: 1px var(--color-dark-900) solid;
+	color: #fff;
+	transition: 0.2s;
+}
+.banner :where(.text, .item img){
+	animation: fadeInLeft 1s ease-in-out;
+}
+.menu-card{
+	position: relative;
+	background: var(--color-organ-500);
+	height: 216px;
+	border: 1px solid #fff;
+}
+.menu-card::after{
+	z-index: 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-900);
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);;
+	transform: scaleY(0);
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+	transform-origin: bottom center;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+	transition: transform .3s;
+}
+.menu-card:hover:after{
+	-webkit-transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	transform: scaleY(1);
+}
+.menu-card a{
+	display: block;
+    position: relative;
+    height: 100%;
+}
+.menu-card :where(.title h4, .icon,a){
+	position: relative;
+	font-weight: normal;
+	color: #fff;
+	z-index: 1;
+}
+.menu-card .icon{
+	font-size: 45px;
+}
 
+/**config->carousel**/
+.carousel-item{
+	min-height: 100vh;
+	height: 100vh;
+	padding: 0;
+}
+.carousel-item::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(360deg, rgba(51,51,51,0.6) 0%, rgba(255,255,255,0) 40%);
+
+}
 /***********************************************/
 /*                                       	   */
 /*                components               	   */
 /*                                             */
 /***********************************************/
-
-/***                border                   ***/
-/***********************************************/
-
-.border-title{
-	display: flex;
-	border-bottom: 3px solid var(--color-organ-secondary);
+.mobile-hide{
+	display: none;
 }
-
-.border-title .a{
-	color: #fff;
-    background: var(--color-organ-secondary);
-    padding: .15em .7em;
-	margin: 0;
-    padding-right: 1em;
-    display: inline-block;
-    position: relative;
-	font-size: x-large;
-}
-
-/***               link box                  ***/
-/***********************************************/
-.link-box{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 .link-box a{
-	padding: 5px;
-    border: 1px solid;
+	display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: var(--color-dark-950);
+    border-radius: 24px;
+    border: 1px var(--color-dark-950) solid;
+	text-decoration: none;
+	transition: 0.2s;
 }
-
 .link-box a:hover{
-	text-transform: uppercase;
-	text-decoration: underline;
+	background-color: var(--color-organ-500);
+	border: 1px var(--color-organ-500) solid;
+	color: #fff;
 	transition: 0.2s;
 }
 
@@ -879,11 +850,7 @@ blockquote{
 
 
 /**config->carousel**/
-.carousel-item{
-	min-height: 84vh;
-	height: 84vh;
-	padding: 0;
-}
+
 .carousel-item.full{
 	min-height: 510px;
 	height: 510px;

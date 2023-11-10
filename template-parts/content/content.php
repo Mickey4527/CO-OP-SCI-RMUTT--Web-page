@@ -1,83 +1,26 @@
 <!--Carousel-->
 <div class="container-fluid p-0">
     <?php 
-    // config the carousel
-    $cat_set = array(
-        'post_type' => 'post',
-        'posts_per_page' => 6,
-        //'cat' => '' // <= Default is all categories. Delete comment to specify a category
-    );
-
-    // you can edit the carousel_feed function in inc/news_feed.php
-    echo carousel_feed('homefeed', $cat_set);
+        carousel_feed(CARO_name);
     ?>
 </div>
 
 <!--Menu-->
 <div class="container-xxl p-4">
-    <div class="row">	
-        <div class="side-menu ps-5">
+    <div class="row">
+        <div class="row col-md-12 mb-3 d-flex align-items-center justify-content-evenly">
+            <h2 class="mt-4 mb-5 text-center">เมนู</h2>
             <?php
-            //config values
-                $list_menu = array(
-                    'calendar_coop' => array(
-                        'title' => 'ปฏิทินฝึกประสบการณ์วิชาชีพ',
-                        'link' => 'https://coopsci.rmutt.ac.th/?page_id=2248',
-                        'icon' => 'bi bi-calendar4-week'
-                    ),
-                    'download_coop' => array(
-                        'title' => 'ดาวโหลดน์แบบฟอร์ม',
-                        'link' => 'https://coopsci.rmutt.ac.th/?page_id=3124',
-                        'icon' => 'bi bi-download'
-                    ),
-                    'manual_coop' => array(
-                        'title' => 'คู่มือนักศึกษาและอาจารย์',
-                        'link' => 'https://coopsci.rmutt.ac.th/?page_id=3126',
-                        'icon' => 'bi bi-book'
-                     ),
-                    'data_coop' => array(
-                        'title' => 'ฐานข้อมูลสถานประกอบการ',
-                        'link' => 'https://lookerstudio.google.com/s/uvbljH9fO_U',
-                        'icon' => 'bi bi-pie-chart-fill'
-                    ),
-                    'e-porfolio' => array(
-                        'title' => 'E-Porfolio นักศึกษา',
-                        'link' => 'https://www.oreg.rmutt.ac.th/?page_id=9968',
-                        'icon' => 'bi bi-file-earmark-person-fill'
-                    ),
-                    // template for add new menu
-                    // 'menu_name' => array(
-                    //     'title' => 'menu title',
-                    //     'link' => 'menu link',
-                    //     'icon' => 'menu icon'
-                    // ),
-            );
-                // you can edit the menu_feed function in inc/menu_feed.php
-               echo menu_feed($list_menu);
+                menu_feed();
             ?>
-            </div>
         </div>
-	</div>
-
-<!--CWIE-->
-<div class="container-xxl mb-5">
-	<div class="row row-cols-1 row-cols-sm-2 align-items-center justify-content-center py-2">
-		<div class="col-10 col-sm-8 col-lg-6">
-			 <img width="100%" loading="lazy" alt ="contemporary-office" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/10606197_9814-scaled.jpg">
-		</div>
-		<div class="col ">
-			 <h2 class="display-6 fw-medium animate__animated animate__fadeInUp  text-coop-1">CWIE (Cooperative and Work Integrated Education)</h2>
-			<p class="fs-5 animate__animated animate__fadeInUp">คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต
-			</p>
-			<div class="d-flex justify-content-center mt-4">
-				<div class="link-box">
-				<a href="https://coopsci.rmutt.ac.th/?page_id=2533">อ่านเพิ่มเติม</a>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="col-md-12 row row-cols-1 row-cols-sm-2 align-items-center justify-content-center py-2">
+           <?php spContent(); ?>
+        </div>
+    </div>
 </div>
 
+<!--CWIE-->
 
 <?php 
     $category_id = get_cat_ID( 'ข่าวประชาสัมพันธ์' ); // Get the ID of a given category

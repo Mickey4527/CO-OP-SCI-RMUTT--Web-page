@@ -1,3 +1,13 @@
+<?php
+/**
+ * MIX Theme
+ * File Description: This file contains the footer for the theme.
+ * 
+ * @package MIX
+ * @since MIX 1.0
+ */
+?>
+
 <footer class="py-5 bg-organ-1 text-white">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2">
