@@ -120,7 +120,7 @@ function spContent(){
     $output .= '<div class="d-flex justify-content-center mt-4">';
     $output .= '<div class="link-box">';
     $output .= '<a href="'.link_sp.'">'.link_sp_name.' <i class="bi bi-box-arrow-in-up-right"></i></a>';
-    $output .= '</div></div></div>';
+    $output .= '</div></div></div></div>'."\n";
 
     echo $output;
 }
