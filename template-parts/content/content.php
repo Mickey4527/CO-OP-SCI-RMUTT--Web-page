@@ -6,7 +6,7 @@
 </div>
 
 <!--Menu-->
-<div class="container-xxl px-4 pb-4">
+<div class="container-xxl p-4">
     <div class="row">
         <div class="row col-md-12 mb-3 d-flex align-items-center justify-content-evenly">
             <h2 class="mt-4 mb-5 text-center">เมนู</h2>
@@ -19,8 +19,8 @@
 
 <!--CWIE-->
 <div class="bg-body-1 mt-3 ">
-    <div class="container-xxl py-4">    
-        <?php spContent(); ?>
+    <div class="container-xxl py-5">    
+            <?php spContent(); ?>
     </div>
 </div>
 
