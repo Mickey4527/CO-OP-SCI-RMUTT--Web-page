@@ -65,7 +65,7 @@ define('header_sp','CWIE (Cooperative and Work Integrated Education)');
 define('detail_sp','คือ หลักสูตรการเรียนการสอนในลักษณะร่วมผลิตระหว่างสถาบันอุดมศึกษาและสถานประกอบการ (ภาครัฐ เอกชน ชุมชน) เพื่อให้บัณฑิตพร้อมสู่โลกแห่งการทำงานจริงได้ทันที มีสมรรถนะตรงกับความต้องการของตลาดงาน สามารถพัฒนาอาชีพในปัจจุบันและเตรียมพร้อมรองรับตำแหน่งงานในอนาคต');
 define('link_sp','https://coopsci.rmutt.ac.th/?page_id=2533');
 define('link_sp_name','อ่านเพิ่มเติม');
-define('img_sp','https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/10606197_9814-scaled.jpg');
+define('img_sp',null);
 /****************************************************************************************/
 /*
     * ตั้งค่าการแสดงผลข่าวสาร
@@ -82,7 +82,7 @@ define('CARO_DATE_AFTER','45 days ago'); // จำนวนวันที่ต
  * banner จะแสดงเมื่อไม่มีข่าวสารที่ต้องการแสด
 */
 define('BANNER',true); // ตัวแปรสำหรับเปิดปิดการแสดง banner
-define('BANNER_IMG','https://coopsci.rmutt.ac.th/wp-content/uploads/2023/11/banner.png'); // รูปภาพ banner
+define('BANNER_IMG',get_template_directory_uri().'/assets/images/banner.png'); // รูปภาพ banner
 define('BANNER_LINK','#'); // ลิงค์ที่ต้องการเชื่อมโยง
 define('BANNER_LINK_NAME','สหกิจคืออะไร'); // ข้อความลิงค์
 define('BANNER_Header','สหกิจศึกษา<br>คณะวิทยาศาสตร์และเทคโนโลยี'); // หัวข้อ banner

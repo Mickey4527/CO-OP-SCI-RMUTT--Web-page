@@ -17,8 +17,25 @@ function reveal() {
     }
   }
 }
+function headerNavbar(){
+  const header = document.getElementById("header-navbar");
 
+  let scrollPos = window.scrollY;
+  // change color of navbar on scroll
+  if (scrollPos > 50) {
+    header.classList.add('sticky-navbar');
+  
+  } else {
+    header.classList.remove('sticky-navbar');
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener('scroll', headerNavbar);
+});
 window.addEventListener("scroll", reveal);
 
+
 // To check the scroll position on page load
+
 reveal();

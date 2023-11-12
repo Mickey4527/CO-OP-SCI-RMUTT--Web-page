@@ -9,7 +9,8 @@
 
  function navbar(){
     $txt_color = (is_front_page()) ? 'text-white' : 'text-dark';
-    $output = '<nav class="navbar navbar-expand-xl text-dark navbar-primary position-fixed w-100" aria-label="navbarPrimary" id="header-navbar">';
+    $bg_color = (is_front_page()) ? 'bg-transparent' : 'bg-white';
+    $output = '<nav class="navbar navbar-expand-xl text-dark navbar-primary position-fixed w-100 '.$bg_color.'" aria-label="navbarPrimary" id="header-navbar">';
     $output .= '<div class="container-fluid px-5"><a class="navbar-brand" href="'.home_url().'">';
     // Logo
     $output .= ( has_custom_logo() ) ? 
@@ -29,9 +30,10 @@
                         'depth'           => 3, 
                         'container'       => 'div',
                         'container_class' => 'ms-auto me-4',
-                        'menu_class'      => 'navbar-nav primary me-auto mb-2 mb-xl-0 fw-medium',
+                        'menu_class'      => 'navbar-nav primary me-auto mb-2 mb-xl-0 fw-normal '.$txt_color,
                         'fallback_cb'     => '__return_false',
                         'walker'          => new bootstrap_5_wp_nav_menu_walker(),
+                        'echo'            => false,
                     ) 
                 );
     endif;

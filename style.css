@@ -34,10 +34,11 @@ License URI: 	None
 	--color-blue-1: #2B6B90;
 	--color-organ-400: #f49243;
 	--color-organ-500: #f1741e;
-	--color-organ-600: #d45413;
+	--color-organ-600: #d45413; /* primary */
 	--color-organ-700: #bb4313;
 	--color-organ-800: #953617;
 
+	--color-dark-100: #e7e7e7;
 	--color-dark-900: #333333;
 	--color-dark-950: #262626;
 	--color-dark-600: #5d5d5d;
@@ -73,6 +74,12 @@ License URI: 	None
 }
 .bg-dark-2{
 	background-color: var(--color-dark-2);
+}
+.bg-body-1{
+	background-color: var(--color-dark-100);
+}
+.bg-transparent{
+	background: linear-gradient(180deg, rgba(51,51,51,0.6) 0%, rgba(255,255,255,0) 100%);
 }
 
 .text-organ-400{
@@ -118,7 +125,11 @@ html{
 }
 
 h1,h2,h3,h4,h5,h6{
-	color: var(--color-dark-2);
+	color: var(--color-dark-950);
+}
+
+p{
+	color: var(--color-dark-600);
 }
 
 a{
@@ -127,9 +138,24 @@ a{
 
 
 .navbar-primary{
-	height: 6rem;
-	background: linear-gradient(180deg, rgba(51,51,51,0.6) 0%, rgba(255,255,255,0) 100%);
+	height: 6.1rem;
 	z-index: 1000;
+	transition: 0.3s;
+}
+
+.sticky-navbar::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: -1;
+	animation: fadeInDown 0.3s ease-in-out;
+}
+.sticky-navbar :where(.text-white){
+	color: var(--color-dark-900) !important;
 }
 .banner{
 	width: 100%;
@@ -180,9 +206,14 @@ a{
 	width: 100%;
     height: 100%;
     position: absolute;
+	display: flex;
+	align-items: end;
     left: 25%;
-    top: calc(15% + 2vh);
 	z-index: 1;
+}
+.banner .item img{
+	width: 1400px;
+	object-fit: cover;
 }
 .banner .link a{
 	display: inline-block;

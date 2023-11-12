@@ -104,12 +104,19 @@ function carousel_feed($name = 'carousel') {
 }
 
 function spContent(){
-    $output = '<div class="col-10 col-sm-8 col-lg-6">';
-    $output .= '<img width="100%" loading="lazy" alt ="
-    '.header_sp.'" src="'.img_sp.'">';
-    $output .= '</div><div class="col">';
-    $output .= '<h2 class="h-4 fn-normal">'.header_sp.'</h2>';
-    $output .= '<p class="text-dark-600 fs-5">'.detail_sp.'</p>';
+    if(img_sp !== '' && img_sp !== null){
+        $output = '<div class="row row-cols-1 row-cols-sm-2 align-items-center justify-content-center py-2">';
+        $output = '<div class="col-10 col-sm-8 col-lg-6">';
+        $output .= '<img width="100%" loading="lazy" alt ="
+        '.header_sp.'" src="'.img_sp.'"></div>';
+        $output .= '<div class="col-12 align-items-center">';
+    }
+    else{
+        $output = '<div class="row align-items-center justify-content-center py-2">';
+        $output .= '<div class="col-12 align-items-center text-center">';
+    }
+    $output .= '<h2 class="h4 fn-normal">'.header_sp.'</h2>';
+    $output .= '<p>'.detail_sp.'</p>';
     $output .= '<div class="d-flex justify-content-center mt-4">';
     $output .= '<div class="link-box">';
     $output .= '<a href="'.link_sp.'">'.link_sp_name.' <i class="bi bi-box-arrow-in-up-right"></i></a>';
