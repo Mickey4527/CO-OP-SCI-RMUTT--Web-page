@@ -7,23 +7,43 @@
  * @since MIX 2.0
  */
 
- function navbar(){
-    $txt_color = (is_front_page()) ? 'text-white' : 'text-dark';
-    $bg_color = (is_front_page()) ? 'bg-transparent' : 'bg-white';
-    $output = '<nav class="navbar navbar-expand-xl text-dark navbar-primary position-fixed w-100 '.$bg_color.'" aria-label="navbarPrimary" id="header-navbar">';
-    $output .= '<div class="container-fluid px-5"><a class="navbar-brand" href="'.home_url().'">';
+ function navbar($echo = true){
+    // config values
+    $front_page_config = array(
+        'logo' => 'logo',
+        'txt_color' => 'text-white',
+        'bg_color' => 'bg-transparent',
+        'logo_filter' => 'filter-white',
+        'id_header' => 'header-navbar_front',
+        'id_logo' => 'logo_header_front'
+    );
+
+    $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+    
+    $txt_color = (is_front_page()) ? $front_page_config['txt_color'] : 'text-dark';
+    $bg_color = (is_front_page()) ? $front_page_config['bg_color'] : 'bg-white';
+    $logo_filter = (is_front_page()) ? $front_page_config['logo_filter'] : '';
+    $id_header = (is_front_page()) ? $front_page_config['id_header'] : 'header-navbar';
+    $id_logo = (is_front_page()) ? $front_page_config['id_logo'] : 'logo_header';
+    $style = (is_front_page()) ? '' : 'style="border-bottom: 1px var(--color-dark-100) solid;"';
+    
+    $output = '<nav class="navbar navbar-expand-xl text-dark navbar-primary '.$bg_color.'" aria-label="navbarPrimary" id="'.$id_header.'" '.$style.'>';
+    $output .= '<div class="container-fluid px-md-5"><a class="navbar-brand" href="'.home_url().'">';
     // Logo
     $output .= ( has_custom_logo() ) ? 
-        '<img src="'.esc_url( $logo[0] ).'" alt="'.get_bloginfo( 'name' ).'" loading="lazy"></a>' : 
+        '<img class="'.$logo_filter.'" src="'.esc_url( $logo[0] ).'" alt="'.get_bloginfo( 'name' ).'" loading="lazy" id="'.$id_logo.'"></a>' : 
         '<span class="text-logo '.$txt_color.'">'.get_bloginfo( 'name' ).'</span></a>';
     // Menu
-    $output .= '<button class="navbar-toggler '.$txt_color.'" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation">
+    $output .= '<div class="d-flex flex-row-reverse">
+                <button class="navbar-toggler '.$txt_color.'" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
-                </button>';
+                </button>
+                
+                </div>';
     // Menu bar
-    $output .= '<div class="collapse navbar-collapse" id="navbarPrimary">';
+    $output .= '<div class="collapse navbar-collapse navbar-collapse-header" id="navbarPrimary">';
     if (has_nav_menu( 'primary' ) ) : 
         $output .= wp_nav_menu( array(
                         'theme_location'  => 'primary',
@@ -50,6 +70,43 @@
     $output .= '</div>';
     if(!is_search()){ $output .= get_search_form(); }
     $output .= '</nav>';
+
+    if($echo){
+        echo $output;
+    }
+    else{
+        return $output;
+    }
+ }
+
+ function header_page(){
+    $content = '';
+    $output = '<div class="position-fixed w-100 z-3 ">';
+    $output .= '<nav class="bg-organ-600 text-white mobile-hide w-100" aria-label="navbarSecondary">';
+    $output .= '<div class="container-fluid px-md-5">';
+
+      // if enable header text
+      if( has_custom_logo() && display_header_text()==true ) : 
+        $output .= '<span class="text-logo text-white">'.get_bloginfo( 'name' ).'</span>'; endif;
+		// if enable secondary menu
+      if (has_nav_menu( 'secondary' ) ) : 
+		$content =  wp_nav_menu( array(
+		                'theme_location'  => 'secondary',
+                        'depth'           => 3, 
+                        'container'       => 'div',
+                        'container_class' => 'ms-auto',
+                        'menu_class'      => 'navbar-nav secondary me-auto',
+                        'fallback_cb'     => '__return_false',
+                        'walker'          => new bootstrap_5_wp_nav_menu_walker(),
+                        'echo'            => false,
+                    ) 
+                );
+        endif;
+    $output .= $content;
+    $output .= '</div>';
+    $output .= '</nav>';
+    $output .= navbar(false);
+    $output .= '</div>';
 
     echo $output;
  }

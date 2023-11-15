@@ -3,6 +3,8 @@
  * MIX Theme, copyright 2023
  * File Description: This file contains the configuration settings for the theme.
  * 
+ * Template Name: การตั้งค่าธีม
+ * 
  * @package MIX
  * @since MIX 2.0
  */
@@ -95,6 +97,8 @@ define('CAT_NAME_PRIMATY','ข่าวประชาสัมพันธ์')
 
 define('CAT_NAME_SECONDARY','ข่าวประชาสัมพันธ์'); // ชื่อหมวดหมู่ข่าวสาร เลือกจากหมวดหมู่ข่าวสารที่มีอยู่ในเว็บไซต์
 
+define('CAT_NAME_AWARD','ข่าวประชาสัมพันธ์'); // ชื่อหมวดหมู่ข่าวสาร เลือกจากหมวดหมู่ข่าวสารที่มีอยู่ในเว็บไซต์
+
 /****************************************************************************************/
 /*
     * ตั้งค่าลิงค์ที่เกี่ยวข้อง
@@ -121,15 +125,24 @@ define('LINK',array(
     * ตั้งค่าวิธีการติดต่อ
 */
 // ที่อยู่
-define('CONTACT_ADDRESS','อาคาร 1 ชั้น 2 คณะวิทยาศาสตร์ มหาวิทยาลัยเทคโนโลยีมหานคร'); 
+define('CONTACT_ADDRESS','39 หมู่ที่ 1 ถนนรังสิต-นครนายก ตำบลคลองหก อำเภอคลองหลวง จังหวัดปทุมธานี 12110'); 
 // ลิงค์ที่อยู่
 define('CONTACT_ADDRESS_LINK','https://goo.gl/maps/6Z4Z9Z7Z7Z7Z7Z7Z7'); 
-// เบอร์โทรศัพท์
-define('CONTACT_PHONE','02-333-3700 ต่อ 3721'); 
-// อีเมล์
-define('CONTACT_EMAIL',array(
-    'email1' => ''
-)); // อีเมล์
+// '02-549-4136', '02-549-4169'],sci.coop@rmutt.ac.th
+define('CONTACT_INFO',array(
+    'tel' => array(
+        'desc' => 'โทรศัพท์',
+        'title' => '02-549-4136 หรือ 4169',
+        'link' => 'tel:025494136',
+        'icon' => 'bi bi-telephone-fill',
+    ),
+    'email' => array(
+        'desc' => 'อีเมล',
+        'title' => 'sci.coop@rmutt.ac.th',
+        'link' => 'mailto:sci.coop@rmutt.ac.th',
+        'icon' => 'bi bi-envelope-fill',
+    )
+));
 define('CONTACT_SOCIAL',array(
     /*
         * วิธีใช้
@@ -140,20 +153,53 @@ define('CONTACT_SOCIAL',array(
         *   'target' => 'target ของลิงค์ (ใช้ target ของ html)'
     */
     'facebook' => array(
-        'title' => 'Facebook',
+        'title' => 'สหกิจศึกษาคณะวิทยาศาสตร์ มทร.ธัญบุรี',
         'link' => 'https://www.facebook.com/CoopSciRMUTT',
-        'logo' => 'assets/images/logo-facebook.png',
+        'icon' => 'bi bi-facebook',
         'target' => '_blank'
     ),
     'line' => array(
         'title' => 'Line',
-        'link' => 'https://line.me/R/ti/p/%40coopsci',
-        'logo' => 'assets/images/logo-line.png',
+        'link' => '',
+        'icon' => '',
         'target' => '_blank'
     ),
     'youtube' => array(
         'title' => 'Youtube',
-        'link' => ''
+        'link' => '',
+        'icon' => '',
+        'target' => '_blank'
     )
+));
+
+/****************************************************************************************/
+/*
+    * ตั้งค่า banner link
+*/
+define('banner_link_page',array(
+    'link 1' => array(
+        'title' => 'CWIE',
+        'img' => 'https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1-3.png',
+        'link' => 'https://cwie.mhesi.go.th',
+        'target' => '_blank',
+    ),
+    'link 2' => array(
+        'title' => 'สำนักส่งเสริมวิชาการและงานทะเบียน (สวท.) มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี',
+        'img' => 'https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/2-2.png',
+        'link' => 'https://www.oreg.rmutt.ac.th',
+        'target' => '_blank',
+    ),
+    'link 3' => array(
+        'title' => 'กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม',
+        'img' => 'https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/3-1.png',
+        'link' => 'https://www.mhesi.go.th',
+        'target' => '_blank',
+    ),
+    'link 4' => array(
+        'title' => 'สมาคมสหกิจศึกษาไทย',
+        'img' => 'https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/4.png',
+        'link' => 'https://tace.sut.ac.th/tace',
+        'target' => '_blank',
+    ),
 ));
 ?>

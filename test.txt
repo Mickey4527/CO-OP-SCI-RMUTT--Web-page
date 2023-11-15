@@ -1,0 +1,491 @@
+ <?php 
+                // config the carousel
+                $cat_set = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                    'cat' => $category_id // <= Default is all categories. Delete comment to specify a category
+                );
+                
+                // you can edit the carousel_feed function in inc/news_feed.php
+                echo carousel_feed('newsfeed', $cat_set);
+    ?>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 7,
+                    'cat' => $category_id
+                );
+
+                $loop = new WP_Query($args);
+                $i = 1;
+                $name = "carousel-news";
+
+                while ($loop->have_posts() && $i <= 7) :
+                    $loop->the_post();
+
+                    if ($i == 1) : ?>
+                        <div class="col-md">
+                        <div id="<?php echo $name;?>" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#<?php echo $name;?>" data-bs-slide-to="0" class="active"></button>
+                                <?php
+                                for ($j = 1; $j < 3; $j++) {
+                                    echo '<button type="button" data-bs-target="#'.$name.'" data-bs-slide-to="'.$j.'"></button>';  
+                                }?>
+                            </div>
+                            <div class="carousel-inner">
+                        <?php endif;
+
+                        if ($i < 4) : ?>
+                                <div class="carousel-item full <?php if ($i == 1) : echo "active"; endif; ?>" >
+                                    <a href="<?php the_permalink();?>">
+                                        <div class="carousel-thumbnail">
+                                            <?php the_post_thumbnail();?>
+                                        </div>
+                                    </a>
+                                    <div class="bg-side"><?php the_post_thumbnail();?></div>
+                                </div>
+                        <?php endif;
+                        
+                        if ($i == 4) : ?>
+                        </div>
+                            <button class="carousel-control-prev bg-onlypre-left" type="button" data-bs-target="#<?php echo $name;?>" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next bg-onlynext-right" type="button" data-bs-target="#<?php echo $name;?>" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                <div class="col-md-4 c-hide  px-0">
+                <?php endif;
+                if ($i > 5 && $i <= 7) : ?>
+                      <?php get_template_part( 'template-parts/content/content', 'excerptfull' );?>
+                <?php endif; if ($i == 7) :?>
+                </div>
+                <?php endif;
+                    $i++;
+                endwhile;
+                wp_reset_postdata();
+                ?>
+
+
+                 <div class="col-md-12 mt-5 mb-3 d-flex align-items-center justify-content-between">
+                <h2>ผลงานรางวัล</h2>
+				<?php if( have_posts(  )) : ?><div class="link-box"><a href="https://coopsci.rmutt.ac.th/?page_id=2430">ดูทั้งหมด</a></div><?php endif;?>
+        </div>
+
+
+        <div class="col-md-12 mt-3">
+			<div class="row">
+				<?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                    'cat' => 35
+                );
+
+            $loop = new WP_Query($args);
+            $i = 1;
+
+               while ($loop->have_posts() && $i <= 4) :
+                $loop->the_post(); ?>
+                <div class="col-md-3">
+                      <?php get_template_part( 'template-parts/content/content', 'excerpt' );?>
+                </div>
+            <?php endwhile; ?>
+
+            <footer class="py-5 bg-organ-1 text-white">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2">
+      <div class="col mb-3 ">
+            <h5>งานสหกิจศึกษา ฝ่ายวิชาการ คณะวิทยาศาสตร์และเทคโนโลยี : RMUTT.</h5>
+            <p>ที่อยู่ : 39 หมู่ที่ 1 ถนนรังสิต-นครนายก ตำบลคลองหก อำเภอคลองหลวง จังหวัดปทุมธานี 12110</p>
+		  <div class="col mb-3 mt-5">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
+  <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+</svg>
+			  <p class="d-inline ms-3 fs-5">
+			  <a href = "tel:02-549-4136">02-549-4136</a> หรือ <a href = "tel:02-549-4169">4169</a>
+			  </p>
+		  </div>
+		  <div class="col mb-3">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+</svg><p class="d-inline ms-3 fs-5">
+			  <a href = "mailto:sci.coop@rmutt.ac.th">sci.coop@rmutt.ac.th</a>
+			  </p>
+		  </div>
+		  <div class="col mb-3">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg><p class="d-inline ms-3 fs-5">
+			  <a href="https://www.facebook.com/profile.php?id=100083038253731">สหกิจศึกษาคณะวิทยาศาสตร์ มทร.ธัญบุรี</a>
+			  </p>
+		  </div>
+		  <div class="col mb-3">
+			  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="white" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+</svg><p>
+			  <a href="#"></a>
+			  </p>
+		  </div>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+        <?php printf( '<p>&copy; %1$s %2$s.</p>', date( 'Y' ), get_bloginfo( 'name' ) );?>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-center d-inline-block">
+        <div class="text-center">
+        <sup><small class="text-white">Made by <a href="https://github.com/Mickey4527">Saran</a></small> | </sup>
+		<sup><small  class="text-muted text-white">Visual by <a href="https://www.freepik.com/">Freepik</a></small></sup>
+        </div>
+    </div>
+      </div>
+    </footer>
+
+    /***               card box                  ***/
+/***********************************************/
+.card-box{
+	width: 100%;
+	overflow: hidden;
+	margin: 4px 10px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+    word-wrap: break-word;
+}
+.card-box:hover{
+	transition: 0.3s;
+    transform:translateY(-5px);
+}
+/*card full*/
+.card-box.full{
+	width: 100%;
+}
+/*card > div.thumbnail*/
+.card-box .thumbnail{
+	height: 250px;
+}
+/*card > div.thumbnail > img*/
+.card-box .thumbnail img{
+	width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+/*card use for text*/
+.card-box .item-contents{
+	padding: 14px 16px;
+	height: 163px;
+}
+
+.card-box .item-contents .date{
+	font-size: 1rem;
+	color: #999;
+}
+.card-box .item-contents .title{
+	width: auto;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	margin: 8px 0 0 0;
+	color: #444546;
+}
+
+.card-box .item-contents .content{ 
+	width: auto;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+.card-box .entry-footer{
+	display: grid;
+	width: 100%;
+	padding: 0 16px;
+	bottom: 0;
+	position: sticky;
+	border-top: 1px solid #e7e7e7;
+}
+
+.card-box .entry-footer a{
+	display: block;
+	padding: 10px;
+}
+.card-box .entry-footer a:before {
+    float: right;
+    top: 25%;
+    position: relative;
+}
+.card-box.ms-1{
+	width: 320px;	
+}
+
+/*cardbox for menu*/
+.card-box.ms-2{
+	width: 240px;
+	height: 13.5em;
+	color: var(--color-organ-primary);
+	padding: 10px;
+	line-height: 24px;
+	display: inline-flex;
+	flex-wrap: wrap;
+    align-content: center;
+	transform: scale(1.0);
+	transition: 0.2s;
+}
+.card-box.ms-2:hover{
+	transform: scale(1.05);
+}
+.card-box.ms-2 .icon{
+	font-size: 45px;
+	font-weight: bold;
+}
+.card-box .title{
+	margin: 10% 0;
+}
+
+.card-box.type-3{
+	width: 320px;
+	height: 75px;
+	margin: 0;
+	display:inline-block;
+}
+.card-box.type-3 .logo{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-box.type-3 .logo img{
+	width: 98%;
+}
+
+.card-box.type-4 {
+    width: 100%;
+    height: 275px;
+    position: relative;
+	overflow: hidden;
+    margin: 0;
+    transform: scale(1.0);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-box.type-4.news-feed{
+	width: 100%;
+	height: 255px;
+	display: flex;
+    align-items: flex-end;
+    justify-content: normal;
+}
+
+.card-box.type-4.news-feed > img{
+	max-width: 114%;
+	filter: none;
+	min-height: 100%;
+}
+.card-box.type-4.news-feed .item-contents{
+	background-image: linear-gradient(120deg, var(--color-teal-tertiary) 0%, var(--color-coop-dark-1) 100%);
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	height: 58px;
+}
+
+.card-box.type-4 > img {
+    display: block;
+    filter: saturate(0.3);
+}
+.card-box.type-4 .item-contents{
+	max-width: 100%;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+	height: initial;
+}
+
+.card-box_overlay {
+	background: var(--color-organ-700);
+    position: absolute;
+    background-blend-mode: overlay;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+
+.card-box .tag{
+	color: var(--color-coop-light-2);
+	padding: 4px;
+	font-size: 12px;
+	border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px){
+	.card-box.ms-2{
+		width: 210px;
+		line-height: 55px;
+		height: 14em;
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 980px){
+	.card-box,.card-box.ms-1
+	{
+		width:  100%;
+		height: inherit;
+		margin: 15px 0;
+	}
+	.card-box.ms-2{
+		width: 145px;
+		line-height: 55px;
+		height: 14em;
+		margin: 5px;
+	}
+	.card-box.type-3{
+		width: 100%;
+		height: 4em;
+		display:inline-block;
+	}
+	.card-box.type-4 {
+    	width: 100%;
+    	height: 125px;
+	}
+}
+@media screen and (max-width: 400px){
+	.card-box{
+		border: 0;
+		border-radius: 0;
+	}
+
+	.card-box:hover{
+		box-shadow: 0;
+	}
+}
+
+/***header-page***/
+/************************************/
+.header-page{
+	width: 100%;
+    height: 175px;
+    position: relative;
+	overflow: hidden;
+    margin: 0;
+	margin-top: 6.1rem;
+    transform: scale(1.0);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-page > img{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	display: block;
+	width: 100%;
+}
+.header-page .item-contents{
+	max-width: 100%;
+	z-index: 10;
+	position: absolute;
+	display: flex;
+	height: initial;
+}
+.header-page .item-contents h1{
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+
+/***article-page***/
+/************************************/
+.article-header_img{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.article-header_img > img{
+	width: 65%;
+}
+
+.article-header_date{
+	font-size: calc(1.10rem + .1vw);
+	color: #999;
+}
+
+.article-content{
+	line-height: 1.5;
+}
+.article-content a:hover{
+	text-decoration: underline;
+}
+
+.article-content p,.article-content li{
+	font-size: 16px;
+	font-family: 'sarabun', sans-serif;
+}
+
+.article-header_writter{
+	font-size: calc(0.85rem + .1vw);
+	color: #282828;
+}
+.article-header_writter a{
+	margin-left: 6px;
+}
+
+.article-footer_category{
+	color: #282828;
+	display: flex;
+	padding: 10px;
+}
+
+.article-footer_item{
+	margin-left: 10px;
+}
+
+.article-footer_item ul{
+	margin: 0;
+	padding: 0;
+}
+.article-footer_item ul li{
+	list-style: none;
+	position: relative;
+	display: inline-flex;
+	margin-left: 8px;
+}
+
+.article-footer_item ul li a
+{
+	border-radius: 8px;
+	border: 1px solid #e7e7e7;
+	padding: 8px 10px;
+} 
+
+.article-footer_item ul li a:hover{
+	background-color: #f2f2f2;
+	transition: 0.2s;
+}
+
+@media screen and (max-width: 980px){
+	.article-header_img{
+		height: 100%;
+		margin: 0;
+	}
+
+	.article-header_img > img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

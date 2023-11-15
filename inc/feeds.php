@@ -51,7 +51,7 @@ function carousel_feed($name = 'carousel') {
 
         $output = '<div class="banner">
         <div class="banner-content p-5">
-            <div class="text p-5">
+            <div class="text p-md-5">
                 <h1>'.BANNER_Header.'</h1>
                 <p class="fs-5">'.BANNER_Detail.'</p>
                 '.$link.'
@@ -124,4 +124,105 @@ function spContent(){
 
     echo $output;
 }
+
+function link_feeds(){
+    $banner = banner_link_page;
+    $output = '';
+    foreach($banner as $key => $value){
+        $output .= '<div class="col-6 col-md-4 col-lg-3">';
+        $output .= '<a href="'.$value['link'].'" target="'.$value['target'].'" class="d-flex justify-content-center align-items-center">';
+        $output .= '<img src="'.$value['img'].'" alt="'.$value['title'].'" class="img-fluid">';
+        $output .= '</a></div>';
+    }
+    echo $output;
+}
+function footer_contact_page(){
+    $social = CONTACT_SOCIAL;
+    $contact = CONTACT_INFO;
+    $output = '';
+    $content ='';
+
+    foreach($contact as $key => $value){
+        if($value['link'] !== ''){
+            $content .= '<div class="col py-xl-0 py-2">';
+            $content .= '<a href="'.$value['link'].'" class="fs-6 px-4 text-organ-500">';
+            $content .= '<i class="'.$value['icon'].'"></i>';
+            $content .= ' '.$value['desc'].'<span class="m-0 fs-5"> '.$value['title'].'</span>';
+            $content .= '</a></div>';
+        }
+    }
+    foreach($social as $key => $value){
+        if($value['link'] !== ''){
+            $content .= '<div class="col py-xl-0 py-2">';
+            $content .= '<a href="'.$value['link'].'" class="fs-6 px-4 text-organ-500">';
+            $content .= '<i class="'.$value['icon'].'"></i>';
+            $content .= ' '.$value['title'];
+            $content .= '</a></div>';
+        }
+    }
+
+    $output = $content;
+    echo $output;
+
+}
+
+function news_feed_box($cat_name,$limit){
+    $category_id = get_cat_ID($cat_name); // Get the ID of a given category
+    $output = '';
+    // id is false when the category cannot be found
+    if(!get_cat_ID($cat_name)){
+        $output .= '<div class="col-12 d-flex justify-content-center align-items-center">
+                <h2 class="h5 my-5 text-center text-dark-600">ไม่พบข้อมูล</h2>
+            </div>';
+        echo $output;
+        return;
+    }
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $limit,
+        'cat' => $category_id
+    );
+
+    $loop = new WP_Query($args);
+    if($loop->post_count == 0){
+        $output .= '<div class="col-12 d-flex justify-content-center align-items-center">
+                <h2 class="h5 my-5 text-center text-dark-600">ไม่พบข้อมูล</h2>
+            </div>';
+    }
+    else{
+        for($i = 1; $loop->have_posts() && $i <= 4; $i++) {
+            $loop->the_post(); 
+            $output .= '<div class="col-12 col-md-6 col-lg-3">';
+            $output .= '<div class="card-box border border-1" id="post-'.get_the_ID().'" '.get_post_class().'">';
+            $output .= '<a href="'.get_the_permalink().'">';
+            $output .= '<div class="thumbnail">';
+            $output .= (has_post_thumbnail()) ? get_the_post_thumbnail() : '<img class="mix-card_img" loading="lazy" alt ="logo slide show" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1920-4.png">';
+            $output .= '</div></a>';
+            $output .= '<div class="item-contents">';
+            $output .= '<span class="date">'.get_the_time('j F Y').'</span>';
+            $output .= '<div class="title"><h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></div>';
+            $output .= '</div>';
+            $output .= '<footer class="entry-footer">';
+            $output .= '<a class="bi bi-arrow-right" href="'.get_the_permalink().'">อ่านต่อ</a>';
+            $output .= edit_post_link();
+            $output .= '</footer></div></div>';
+        }
+    }
+
+    wp_reset_postdata();
+    echo $output;
+}
+
+function social_share(){
+    echo '
+        <article class="col-md-12 py-3 d-flex justify-content-center align-items-center">
+            <span class="fw-bold px-3">Share</span>
+            <a href="https://lineit.line.me/share/ui?url=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-line fs-3"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-facebook fs-3"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi-twitter-x fs-3"></i></a>
+        </article>
+    ';
+}
+
 ?>

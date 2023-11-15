@@ -18,15 +18,20 @@ function reveal() {
   }
 }
 function headerNavbar(){
-  const header = document.getElementById("header-navbar");
+  if(document.getElementById("header-navbar_front") == null || document.getElementById("logo_header_front") == null) return;
+  
+  const header = document.getElementById("header-navbar_front");
+  const logo = document.getElementById("logo_header_front");
 
   let scrollPos = window.scrollY;
   // change color of navbar on scroll
   if (scrollPos > 50) {
     header.classList.add('sticky-navbar');
+    logo.classList.remove('filter-white');
   
   } else {
     header.classList.remove('sticky-navbar');
+    logo.classList.add('filter-white');
   }
 }
 

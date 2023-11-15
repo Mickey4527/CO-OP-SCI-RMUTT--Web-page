@@ -41,6 +41,7 @@
                 </div>
             </div>
         </div>
+        <?php social_share(); ?>
     </footer>
 </article>
 
