@@ -20,7 +20,7 @@
 
     $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
     
-    $txt_color = (is_front_page()) ? $front_page_config['txt_color'] : 'text-dark';
+    $txt_color = (is_front_page()) ? $front_page_config['txt_color'] : '';
     $bg_color = (is_front_page()) ? $front_page_config['bg_color'] : 'bg-white';
     $logo_filter = (is_front_page()) ? $front_page_config['logo_filter'] : '';
     $id_header = (is_front_page()) ? $front_page_config['id_header'] : 'header-navbar';

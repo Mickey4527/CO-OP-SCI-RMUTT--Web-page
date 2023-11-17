@@ -39,7 +39,7 @@ get_header(); ?>
 
                 while ($loop->have_posts() && $i <= 4) :
                     $loop->the_post(); 
-                    get_template_part( 'template-parts/cardbox/card', 'job' );
+                    card_job();
                 endwhile; ?>
             </div>
 		</div>

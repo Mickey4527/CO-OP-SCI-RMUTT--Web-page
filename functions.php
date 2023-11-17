@@ -18,6 +18,7 @@ require_once( MIXSTYLE_ROOTDIR . '/inc/feeds.php' );
 require_once( MIXSTYLE_ROOTDIR . '/inc/config.php' );
 require_once( MIXSTYLE_ROOTDIR . '/inc/navbar.php' );
 require_once( MIXSTYLE_ROOTDIR . '/inc/theme/theme.php' );
+require_once( MIXSTYLE_ROOTDIR . '/inc/header.php' );
 
 
 // Configuring the theme support

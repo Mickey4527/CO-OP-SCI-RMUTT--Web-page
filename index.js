@@ -3,7 +3,7 @@ function search(){
 }
 
 function closesearch(){
-	document.getElementById("search").style.top = "-80px";
+	document.getElementById("search").style.top = "-100%";
 }
 
 function reveal() {

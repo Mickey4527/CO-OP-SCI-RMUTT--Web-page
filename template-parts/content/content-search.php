@@ -30,11 +30,8 @@ function listcontent(){
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
+            archive_card();
        ?>
-       <div class="col-md-3">
-            <?php get_template_part( 'template-parts/content/content', 'excerpt' );
-       ?>
-       </div>
        <?php }
        } 
 												   

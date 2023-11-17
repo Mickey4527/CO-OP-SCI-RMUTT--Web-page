@@ -1,5 +1,5 @@
 <!--Carousel-->
-<div class="container-fluid p-0">
+<div class="container-fluid py-xl-0 px-0 carousel-page">
     <?php 
         carousel_feed(CARO_name);
     ?>
@@ -52,21 +52,27 @@
         <div class="col-12" style="min-height: 120px;">
             <div class="tab-content p-4" id="pills-tabContent">
                 <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                    <?php 
-                        news_feed_box(CAT_NAME_PRIMATY,NEWS_LIMIT);
-                    ?>
+                    <div class="row">
+                        <?php 
+                            news_feed_box(CAT_NAME_PRIMATY,NEWS_LIMIT);
+                         ?>
+                    </div>  
                 </div>
                 
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                    <?php 
-                        news_feed_box(CAT_NAME_SECONDARY,NEWS_LIMIT);
-                    ?>
+                    <div class="row">
+                        <?php 
+                            news_feed_box(CAT_NAME_SECONDARY,NEWS_LIMIT);
+                        ?>
+                    </div>
                 </div>
                 
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-                    <?php 
-                        news_feed_box(CAT_NAME_AWARD,NEWS_LIMIT);
-                    ?>
+                    <div class="row">
+                        <?php 
+                            news_feed_box(CAT_NAME_AWARD,NEWS_LIMIT);
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -7,9 +7,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package MIX
+ * @since MIX 1.0
  */
 
 /*
@@ -24,8 +23,8 @@ if ( post_password_required() ) {
 $twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
-
+<div id="comments" class="container <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
+	<div class="col-12">
 	<?php
 	if ( have_comments() ) :
 		?>
@@ -88,5 +87,5 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		)
 	);
 	?>
-
+	</div>
 </div><!-- #comments -->

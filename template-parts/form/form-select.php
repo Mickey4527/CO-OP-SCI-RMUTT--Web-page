@@ -1,6 +1,7 @@
 <?php
 // call list category for select form
 function selectform($taxonomy = 'category', $orderby = 'name', $order = 'ASC') {
+  $options = '';
   $args = array(
     'taxonomy' => $taxonomy,
     'orderby' => $orderby,

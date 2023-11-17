@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div style="height: 12.2rem; width:100%; background: var(--color-organ-600);"></div>
+
+<div class="container pt-3 pb-5">
   <div class="row">
     <div class="col-md-12">
       <?php the_archive_title( '<h1 class="py-5">', '</h1>' ); ?>
@@ -8,22 +10,19 @@
 
     <div class="col-md-12">
       <div class="row">
-        <div class="col-md-3">
-          <?php get_sidebar(); ?>
-        </div>
-        <div class="col-md-9">
-          <div class="row">
-            <?php
-              while (have_posts()) :
-              the_post();
-              echo '<div class="col-md-4">';
-              get_template_part( 'template-parts/content/content-excerpt' ); 
-              echo '</div>';
-            endwhile;?>
-          </div>
+        <?php
+          if ( have_posts() ){
+            while ( have_posts() ){
+                the_post();
+                archive_card();
+              }
+            }
+            else{
+              get_template_part( 'template-parts/content/content', 'none' );
+            }       
+          ?>
         </div>
       </div>
-    </div>
 
     <div class="col-md-12 d-flex">
       <?php the_posts_pagination(

@@ -29,8 +29,8 @@
 					<?php printf( '<p class="m-0 fs-md-6 small">&copy; %1$s %2$s.</p>', date( 'Y' ), get_bloginfo( 'name' ) );?>
 				</div>
 				<div class="col-12 d-flex justify-content-center align-items-center mt-2"> 	
-					<sup><small class="text-muted">Desgin by <a href="https://github.com/Mickey4527">Saran </a></small> | </sup>
-					<sup><small class="text-muted"> Visual by <a href="https://www.freepik.com/">Freepik</a></small></sup>
+					<sup><small class="text-muted">Desgin by <a href="https://github.com/Mickey4527">Saran&nbsp;</a></small>|</sup>
+					<sup><small class="text-muted">&nbsp;Visual by <a href="https://www.freepik.com/">Freepik</a></small></sup>
 				</div>
 			</div>
       	</div>

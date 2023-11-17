@@ -31,7 +31,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     $indent = str_repeat("\t", $depth);
     // CSDEV changed sub-menu  for dropdown-submenu
     $submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-    $output .= "\n$indent<ul class=\"animate__animated animate__fadeIn dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n<div class=\"container col-sub-menu\">\n";
+    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n<div class=\"container col-sub-menu\">\n<div class=\"row\">\n";
   }
 
   /**

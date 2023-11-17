@@ -5,11 +5,11 @@ include get_template_directory() . '/template-parts/form/form-select.php';
 function searchform(){
     if(is_search()){
         $class_name = "search-page";
-        $class_name_input = "form-control py-1 fs-2 border border-4 border-organ rounded-0";
+        $class_name_input = "form-control py-1 fs-2";
         $id_name = "search-page";
         $id_close = "";
         $button_close = "";
-        $button_search = "<button class=\"btn bg-coop fw-bold fs-5 px-4 rounded-0\" type=\"submit\" id=\"button-addon2\">\n";
+        $button_search = "<button class=\"fw-bold fs-5 px-4 rounded-0\" type=\"submit\" id=\"button-addon2\">\n";
         $button_search .= esc_html__('ค้นหา', 'mix style' );
         $button_search .= "</button>\n";
     }

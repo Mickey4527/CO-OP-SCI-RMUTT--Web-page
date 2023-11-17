@@ -24,7 +24,7 @@
     echo $output;
 }
 
-function carousel_feed($name = 'carousel') {
+function carousel_feed($name = '') {
     //config values
     $cat = CARO_CAT;
     $set = CARO_LIMIT;
@@ -46,7 +46,7 @@ function carousel_feed($name = 'carousel') {
     //Content loop
     $content_inner = '';
 
-    if($loop->post_count == 0 && $name == 'carousel-news' && BANNER) {
+    if($loop->post_count == 0 && $name == 'news' && BANNER) {
         $link = (BANNER_LINK !== '') ? '<div class="link mt-5"><a class="px-5" href="'.BANNER_LINK.'">'.BANNER_LINK_NAME.' <i class="bi bi-arrow-right-short"></i></a></div>' : '';
 
         $output = '<div class="banner">
@@ -93,7 +93,7 @@ function carousel_feed($name = 'carousel') {
                     </button>';
 
         //output
-        $output = '<div name="carousel-'.$name.'" class="carousel slide carousel-fade" data-bs-ride="carousel">'.
+        $output = '<div id="carousel-'.$name.'" class="carousel slide carousel-fade" data-bs-ride="carousel">'.
                     $indicators.
                     $content_inner.
                     $control.
@@ -166,7 +166,7 @@ function footer_contact_page(){
 
 }
 
-function news_feed_box($cat_name,$limit){
+function news_feed_box($cat_name,$limit,$link = true){
     $category_id = get_cat_ID($cat_name); // Get the ID of a given category
     $output = '';
     // id is false when the category cannot be found
@@ -193,20 +193,27 @@ function news_feed_box($cat_name,$limit){
     else{
         for($i = 1; $loop->have_posts() && $i <= 4; $i++) {
             $loop->the_post(); 
-            $output .= '<div class="col-12 col-md-6 col-lg-3">';
-            $output .= '<div class="card-box border border-1" id="post-'.get_the_ID().'" '.get_post_class().'">';
+            $output .= '<div class="col-12 col-md-6 col-lg-3 py-3">';
+            $output .= '<div class="feed-card border border-1" id="post-'.get_the_ID().'">';
             $output .= '<a href="'.get_the_permalink().'">';
             $output .= '<div class="thumbnail">';
-            $output .= (has_post_thumbnail()) ? get_the_post_thumbnail() : '<img class="mix-card_img" loading="lazy" alt ="logo slide show" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1920-4.png">';
+            $output .= (has_post_thumbnail()) ? get_the_post_thumbnail() : '<img loading="lazy" alt ="logo slide show" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1920-4.png">';
             $output .= '</div></a>';
-            $output .= '<div class="item-contents">';
-            $output .= '<span class="date">'.get_the_time('j F Y').'</span>';
-            $output .= '<div class="title"><h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></div>';
+            $output .= '<div class="item-content">';
+            $output .= '<span class="date small text-muted">'.get_the_time('j F Y').'</span>';
+            $output .= '<div class="title"><h5><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5></div>';
             $output .= '</div>';
-            $output .= '<footer class="entry-footer">';
-            $output .= '<a class="bi bi-arrow-right" href="'.get_the_permalink().'">อ่านต่อ</a>';
-            $output .= edit_post_link();
+            $output .= '<footer class="entry-footer d-flex flex-column">';
+            $output .= '<a href="'.get_the_permalink().'">อ่านต่อ<i class="bi bi-arrow-right"></i></a>';
+            if(current_user_can('edit_post', get_the_ID())){
+                $output .= '<a href="'.get_edit_post_link().'">แก้ไข<i class="bi bi-pencil-square"></i></a>';
+            }
             $output .= '</footer></div></div>';
+        }
+        if($link){
+            $output .= '<div class="col-12 d-flex justify-content-center align-items-center mt-4 link-box">';
+            $output .= '<a href="'.get_category_link($category_id).'">ดูทั้งหมด <i class="bi bi-arrow-right"></i></a>';
+            $output .= '</div>';
         }
     }
 
@@ -218,11 +225,55 @@ function social_share(){
     echo '
         <article class="col-md-12 py-3 d-flex justify-content-center align-items-center">
             <span class="fw-bold px-3">Share</span>
-            <a href="https://lineit.line.me/share/ui?url=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-line fs-3"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-facebook fs-3"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi-twitter-x fs-3"></i></a>
+            <a href="https://lineit.line.me/share/ui?url='.get_the_permalink().'" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-line fs-3"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u='.get_the_permalink().'" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi bi-facebook fs-3"></i></a>
+            <a href="https://twitter.com/intent/tweet?url='.get_the_permalink().'&text='.get_the_title().'" target="_blank" rel="noopener noreferrer" class="icon-link"><i class="bi-twitter-x fs-3"></i></a>
         </article>
     ';
 }
 
+function archive_card(){
+    $output = '';
+    $output .= '<div class="col-12 col-md-6 col-lg-3 py-3">';
+    $output .= '<div class="feed-card border border-1">';
+    $output .= '<a href="'.get_the_permalink().'">';
+    $output .= '<div class="thumbnail">';
+    $output .= (has_post_thumbnail()) ? get_the_post_thumbnail() : '<img loading="lazy" alt ="logo slide show" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1920-4.png">';
+    $output .= '</div></a>';
+    $output .= '<div class="item-content">';
+    $output .= '<span class="date small text-muted">'.get_the_time('j F Y').'</span>';
+    $output .= '<div class="title"><h5><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5></div>';
+    $output .= '</div>';
+    $output .= '<footer class="entry-footer d-flex flex-column">';
+    $output .= '<a href="'.get_the_permalink().'">อ่านต่อ<i class="bi bi-arrow-right"></i></a>';
+    if(current_user_can('edit_post', get_the_ID())){
+        $output .= '<a href="'.get_edit_post_link().'">แก้ไข<i class="bi bi-pencil-square"></i></a>';
+    }
+    $output .= '</footer></div></div>';
+
+    echo $output;
+}
+
+function card_job(){
+    $output = '';
+    $output .= 'a href="'.get_the_permalink().'">';
+    $output .= '<div class="card mb-3" id="post-'.get_the_ID().'" '.get_post_class().'">';
+    $output .= '<div class="row g-0">';
+    $output .= '<div class="col-2 col-img rounded-start">';
+    $output .= (has_post_thumbnail()) ? get_the_post_thumbnail() : '<img loading="lazy" alt ="logo slide show" src="https://coopsci.rmutt.ac.th/wp-content/uploads/2023/05/1920-4.png">';
+    $output .= '</div>';
+    $output .= '<div class="col-10">';
+    $output .= '<div class="card-body">';
+    $output .= '<h4 class="card-title fw-bold text-secondary-emphasis">'.get_the_category()[0]->cat_name.'</h5>';
+    $output .= '<h5 class="fw-normal mb-3">'.get_the_title().'</h5>';
+    $output .= '<p class="card-text">';
+    foreach(get_the_tags() as $tag){
+        $output .= '<small class="text-body-secondary me-3">#'.$tag->name.'</small>';
+    }
+    $output .= '</p></div></div></div></div></a>';
+
+
+    echo $output;
+
+}
 ?>
