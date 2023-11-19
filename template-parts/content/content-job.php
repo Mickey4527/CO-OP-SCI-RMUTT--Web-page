@@ -1,5 +1,5 @@
-<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="bg-body-2 p-md-5">
+<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="padding-top: 6.1rem;">
+    <div class="bg-body-1 p-md-5">
 		<div class="container-md mobile-hide"><small class="text-body-secondary me-3"><a href="https://coopsci.rmutt.ac.th/?page_id=4348">&lt;&lt; กลับไปหน้าหางาน</a></small></div>
         <div class="container-md bg-white">
             <div class="row">

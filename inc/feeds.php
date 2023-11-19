@@ -256,7 +256,7 @@ function archive_card(){
 
 function card_job(){
     $output = '';
-    $output .= 'a href="'.get_the_permalink().'">';
+    $output .= '<a href="'.get_the_permalink().'">';
     $output .= '<div class="card mb-3" id="post-'.get_the_ID().'" '.get_post_class().'">';
     $output .= '<div class="row g-0">';
     $output .= '<div class="col-2 col-img rounded-start">';
@@ -276,4 +276,5 @@ function card_job(){
     echo $output;
 
 }
+
 ?>

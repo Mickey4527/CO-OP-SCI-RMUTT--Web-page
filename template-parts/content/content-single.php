@@ -19,7 +19,7 @@
             <?php endif; ?> 
         </article>
 
-        <article class="col-md-12 mt-4">
+        <article class="col-md-12 my-4">
             <h3 class="fw-medium text-dark-950 m-0"><?php the_title();?></h3>
             <span class="text-muted"><?php the_date(); ?>&nbsp;|&nbsp;<?php the_author(); ?></span>
         </article>

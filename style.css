@@ -2,7 +2,7 @@
 Theme Name: 	CO-OP SCI RMUTT: Theme
 Theme URI: 		https://github.com/Mickey4527/CO-OP-SCI-RMUTT--Web-page
 Description: 	ธีมพิเศษสำหรับการใช้ในเว็บงานสหกิจศึกษา คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราาชมงคลธัญบุรี
-version: 		2.0.1
+version: 		2.0.6
 Requires at least: 5.4
 Tested up to:   6.3.1
 Requires PHP:   7.3.0
@@ -41,7 +41,10 @@ License URI: 	None
 	--color-dark-50: #f6f6f6;
 	--color-dark-100: #e7e7e7;
 	--color-dark-200: #d1d1d1;
-	--color-dark-900: #333333;
+	--color-dark-500: #6d6d6d;
+	--color-dark-600: #5d5d5d;
+	--color-dark-800: #454545;
+	--color-dark-900: #333333; /* primary */
 	--color-dark-950: #262626;
 	--color-dark-600: #5d5d5d;
 
@@ -57,34 +60,34 @@ License URI: 	None
 /***********************************************/
 
 .bg-organ-400{
-	background-color: var(--color-organ-400);
+	background-color: var(--color-organ-400) !important;
 }
 .bg-organ-500{
-	background-color: var(--color-organ-500);
+	background-color: var(--color-organ-500) !important;
 }
 .bg-organ-600{
-	background-color: var(--color-organ-600);
+	background-color: var(--color-organ-600) !important;
 }
 .bg-organ-700{
-	background-color: var(--color-organ-700);
+	background-color: var(--color-organ-700) !important;
 }
 .bg-organ-800{
-	background-color: var(--color-organ-800);
+	background-color: var(--color-organ-800) !important;
 }
-.bg-dark-1{
-	background-color: var(--color-dark-1);
+.bg-dark-900{
+	background-color: var(--color-dark-900) !important;
 }
-.bg-dark-2{
-	background-color: var(--color-dark-2);
+.bg-dark-950{
+	background-color: var(--color-dark-950) !important;
 }
 .bg-body-1{
-	background-color: var(--color-dark-100);
+	background-color: var(--color-dark-100) !important;
 }
 .bg-body-2{
-	background-color: var(--color-dark-50);
+	background-color: var(--color-dark-50) !important;
 }
 .bg-body-3{
-	background-color: var(--color-dark-200);
+	background-color: var(--color-dark-200) !important;
 
 }
 .bg-transparent{
@@ -106,14 +109,29 @@ License URI: 	None
 .text-organ-800{
 	color: var(--color-organ-800);
 }
-.text-dark-1{
-	color: var(--color-dark-1);
+.text-white-50{
+	color: var(--color-dark-50);
 }
-.text-dark-2{
-	color: var(--color-dark-2);
+.text-white-100{
+	color: var(--color-dark-100) !important;
+}
+.text-white-200{
+	color: var(--color-dark-200) !important;
+}
+.text-dark-500{
+	color: var(--color-dark-500) !important;
 }
 .text-dark-600{
-	color: var(--color-dark-600);
+	color: var(--color-dark-600) !important;
+}
+.text-dark-800{
+	color: var(--color-dark-800) !important;
+}
+.text-dark-900{
+	color: var(--color-dark-900) !important;
+}
+.text-dark-950{
+	color: var(--color-dark-950) !important;
 }
 
 /***********************************************/
@@ -368,7 +386,7 @@ a{
 }
 .link-box a{
 	display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-radius: 4px;
     color: var(--color-dark-950);
     border-radius: 24px;
@@ -385,7 +403,7 @@ a{
 
 .btn-box{
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 7px 20px;
 	border-radius: 4px;
 	color: var(--color-dark-950);
 	background-color: #fff;
@@ -406,7 +424,7 @@ a{
     border-radius: 4px;
     color: var(--color-dark-950);
     border-radius: 24px;
-    border: 1px var(--color-dark-600) solid;
+    border: 1px var(--color-dark-500) solid;
     text-decoration: none;
     font-size: 14px;
     transition: 0.2s;
@@ -419,14 +437,14 @@ a{
 }
 /* content page style */
 .content-page{
-	min-height: calc(100vh - 12.2rem);
+	min-height: calc(100vh - 10.2rem);
 	height: auto;
-	padding-top: 6.1rem;
+	padding-top: 7.5rem;
 }
 
 .content-page .header{
 	width: 100%;
-	height: 12.2rem;
+	height: 10.2rem;
 	position: relative;
 	overflow: hidden;
 }
@@ -463,25 +481,29 @@ a{
 	animation: fadeInUp .8s;
 }
 
-.content-page .content{
+:is(.content-page, .content-singel-page) .content{
 	width: 100%;
 	height: auto;
-	padding: 50px 0;
 }
-.content-page .content :where(h1,h2,h3,h4,h5,h6,p){
+:is(.content-page .content,.content-singel-page .content) :where(h1,h2,h3,h4,h5,h6,p){
 	margin: 0 0 10px 0;
+	line-height: 2;
 }
-.content-page .content :where(p){
-	color: var(--color-dark-900);
+:is(.content-page .content,.content-singel-page .content) :where(p,ol){
+	color: var(--color-dark-600);
+	font-size: 18px;
 }
-.content-page .content :where(h1,h2,h3,h4,h5,h6){
-	font-weight: 500;
+:is(.content-page .content,.content-singel-page .content) :where(h1,h2,h3){
+	font-weight: 200;
 	color: var(--color-dark-950);
 }
-.content-page .content :where(li,a){
+:is(.content-page .content,.content-singel-page .content) :where(a,ul,ol){
+	line-height: 1.75;
+}
+:is(.content-page .content,.content-singel-page .content) :where(a,ul){
 	color: var(--color-organ-600);
 }
-.content-page .content :where(span){
+:is(.content-page .content,.content-singel-page .content) :where(span){
 	color: var(--color-dark-600);
 }
 
@@ -503,11 +525,7 @@ a{
 	height: auto;
 	object-fit: cover;
 }
-.content-singel-page .content{
-	width: 100%;
-	height: auto;
-	padding: 50px 0;
-}
+
 .content-singel-page .category .item ul{
 	margin: 0;
 	padding: 0;
@@ -615,6 +633,12 @@ a{
 /*            config-bootstarp          	   */
 /*                                             */
 /***********************************************/
+/**col->card**/
+.col-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
 
 /**config->nav-pills**/
 .nav-pills .nav-link{
@@ -686,11 +710,17 @@ a{
 	border-radius: 0;
 	background-color: var(--color-dark-100);
 }
-.dropdown-item:focus, .dropdown-item:hover{
-	background-color: var(--color-dark-100);
+
+.depth_0 .nav-item .dropdown-item{
 	color: var(--color-organ-600);
+	background-color: var(--color-dark-100);
 	transition: 0.2s;
 }
+
+.depth_0 .nav-item :where(.dropdown-item:focus, .dropdown-item:hover){
+	transform: translate(10px);
+}
+
 .dropdown-menu.show::before{
 	content: "";
 	position: absolute;
@@ -989,6 +1019,12 @@ a{
 {
 	display: inline-block;
 }
+
+.wp-file :where(tbody, td, tfoot, th, thead, tr){
+    border-color: var(--color-dark-100);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+}
 /*
 /*
 /* 									 	   
@@ -1006,8 +1042,12 @@ a{
 }
 @media screen and (max-width: 1200px) {
 	.mobile-hide{
-		display: none;
+		display: none !important;
 	}
+	.content-page{
+		padding-top: 6.1rem;
+	}
+
 	.navbar-collapse-header{
 		background-color: var(--color-dark-100);
 		padding: 0 3rem;

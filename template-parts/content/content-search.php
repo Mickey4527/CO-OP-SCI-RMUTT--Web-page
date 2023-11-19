@@ -15,11 +15,15 @@ function listcontent(){
             'posts_per_page' => 12,
 			'paged' => get_query_var('paged') ? get_query_var('paged') : 1
         );
-    
+        # get cat id from url
         if (isset($_GET['cat']) && !empty($_GET['cat'])) {
             $args['cat'] = intval($_GET['cat']);
         }
-    
+        # get tag id from url
+        if (isset($_GET['tag']) && !empty($_GET['tag'])) {
+            $args['tag_id'] = intval($_GET['tag']);
+        }
+        # get search keyword from url
         if (isset($_GET['s']) && !empty($_GET['s'])) {
             $args['s'] = sanitize_text_field($_GET['s']);
         }
@@ -30,7 +34,13 @@ function listcontent(){
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            archive_card();
+       ?>
+              <?php 
+            if($_GET['cat'] == 177){ 
+                card_job();
+            }else{
+                archive_card();
+            }
        ?>
        <?php }
        } 
