@@ -1,0 +1,98 @@
+:root{
+    --color-blue-1: #2B6B90;
+	--color-organ-400: #f49243;
+	--color-organ-500: #f1741e;
+	--color-organ-600: #d35312;/* primary */
+	--color-organ-700: #bb4313;
+	--color-organ-800: #953617;
+
+	--color-dark-50: #f6f6f6;
+	--color-dark-100: #e7e7e7;
+	--color-dark-200: #d1d1d1;
+	--color-dark-500: #6d6d6d;
+	--color-dark-600: #5d5d5d;
+	--color-dark-800: #454545;
+	--color-dark-900: #333333; /* primary */
+	--color-dark-950: #262626;
+	--color-dark-600: #5d5d5d;
+}
+/***********************************************/
+/*                                       	   */
+/*    Background ,border and text color  	   */
+/*                                             */
+/***********************************************/
+
+.bg-organ-400{
+	background-color: var(--color-organ-400) !important;
+}
+.bg-organ-500{
+	background-color: var(--color-organ-500) !important;
+}
+.bg-organ-600{
+	background-color: var(--color-organ-600) !important;
+}
+.bg-organ-700{
+	background-color: var(--color-organ-700) !important;
+}
+.bg-organ-800{
+	background-color: var(--color-organ-800) !important;
+}
+.bg-dark-900{
+	background-color: var(--color-dark-900) !important;
+}
+.bg-dark-950{
+	background-color: var(--color-dark-950) !important;
+}
+.bg-body-1{
+	background-color: var(--color-dark-100) !important;
+}
+.bg-body-2{
+	background-color: var(--color-dark-50) !important;
+}
+.bg-body-3{
+	background-color: var(--color-dark-200) !important;
+
+}
+.bg-transparent{
+	background: linear-gradient(180deg, rgba(51, 51, 51, 0.8) 0%, rgba(255,255,255,0) 100%);
+}
+
+.text-organ-400{
+	color: var(--color-organ-400);
+}
+.text-organ-500{
+	color: var(--color-organ-500);
+}
+.text-organ-600{
+	color: var(--color-organ-600);
+}
+.text-organ-700{
+	color: var(--color-organ-700);
+}
+.text-organ-800{
+	color: var(--color-organ-800);
+}
+.text-white-50{
+	color: var(--color-dark-50);
+}
+.text-white-100{
+	color: var(--color-dark-100) !important;
+}
+.text-white-200{
+	color: var(--color-dark-200) !important;
+}
+.text-dark-500{
+	color: var(--color-dark-500) !important;
+}
+.text-dark-600{
+	color: var(--color-dark-600) !important;
+}
+.text-dark-800{
+	color: var(--color-dark-800) !important;
+}
+.text-dark-900{
+	color: var(--color-dark-900) !important;
+}
+.text-dark-950{
+	color: var(--color-dark-950) !important;
+}

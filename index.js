@@ -18,25 +18,37 @@ function reveal() {
   }
 }
 function headerNavbar(){
-  if(document.getElementById("header-navbar_front") == null || document.getElementById("logo_header_front") == null) return;
-  
   const header = document.getElementById("header-navbar_front");
   const logo = document.getElementById("logo_header_front");
 
-  let scrollPos = window.scrollY;
-  // change color of navbar on scroll
-  if (scrollPos > 50) {
-    header.classList.add('sticky-navbar');
-    logo.classList.remove('filter-white');
-  
-  } else {
-    header.classList.remove('sticky-navbar');
-    logo.classList.add('filter-white');
+  if(header && logo) {
+    let scrollPos = window.scrollY;
+    // change color of navbar on scroll
+    if (scrollPos > 50) {
+      header.classList.add('sticky-navbar');
+      logo.classList.remove('filter-white');
+    
+    } else {
+      header.classList.remove('sticky-navbar');
+      logo.classList.add('filter-white');
+    }
+  }
+  else if(header) {
+    let scrollPos = window.scrollY;
+    // change color of navbar on scroll
+    if (scrollPos > 50) {
+      header.classList.add('sticky-navbar');
+    } else {
+      header.classList.remove('sticky-navbar');
+    }
+  }
+  else{
+    return;
   }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  window.addEventListener('scroll', headerNavbar);
+  window.addEventListener('scroll', headerNavbar); // addEventListener ให้เมื่อเริ่ม scroll จะเรียกใช้ function headerNavbar
 });
 window.addEventListener("scroll", reveal);
 

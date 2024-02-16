@@ -7,6 +7,9 @@
  * @since MIX 2.0
  */
 
+ function check_config_menu(){
+    return is_front_page() && dynamic_color_menu_is_home;
+ }
  function navbar($echo = true){
     // config values
     $front_page_config = array(
@@ -20,12 +23,12 @@
 
     $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
     
-    $txt_color = (is_front_page()) ? $front_page_config['txt_color'] : '';
-    $bg_color = (is_front_page()) ? $front_page_config['bg_color'] : 'bg-white';
-    $logo_filter = (is_front_page()) ? $front_page_config['logo_filter'] : '';
-    $id_header = (is_front_page()) ? $front_page_config['id_header'] : 'header-navbar';
-    $id_logo = (is_front_page()) ? $front_page_config['id_logo'] : 'logo_header';
-    $style = (is_front_page()) ? '' : 'style="border-bottom: 1px var(--color-dark-100) solid;"';
+    $txt_color = (check_config_menu()) ? $front_page_config['txt_color'] : '';
+    $bg_color = (check_config_menu()) ? $front_page_config['bg_color'] : 'bg-white';
+    $logo_filter = (check_config_menu()) ? $front_page_config['logo_filter'] : '';
+    $id_header = (check_config_menu()) ? $front_page_config['id_header'] : 'header-navbar';
+    $id_logo = (check_config_menu()) ? $front_page_config['id_logo'] : 'logo_header';
+    $style = (check_config_menu()) ? '' : 'style="border-bottom: 1px var(--color-dark-100) solid;"';
     
     $output = '<nav class="navbar navbar-expand-xl text-dark navbar-primary '.$bg_color.'" aria-label="navbarPrimary" id="'.$id_header.'" '.$style.'>';
     $output .= '<div class="container-fluid px-md-5"><a class="navbar-brand" href="'.home_url().'">';
@@ -82,7 +85,7 @@
  function header_page(){
     $content = '';
     $output = '<div class="position-fixed w-100 z-3 ">';
-    $output .= '<nav class="bg-organ-600 text-white mobile-hide w-100" aria-label="navbarSecondary">';
+    $output .= '<nav class="bg-organ-500 text-white mobile-hide w-100" aria-label="navbarSecondary">';
     $output .= '<div class="container-fluid px-md-5">';
 
       // if enable header text

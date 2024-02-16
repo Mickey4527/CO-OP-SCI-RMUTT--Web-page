@@ -9,7 +9,7 @@
  */
 ?>
 
-<section class="container content-singel-page" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<section class="container content-singel-page mb-3" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
         <article class="col-md-12 d-flex justify-content-center align-items-center">
             <?php if ( has_post_thumbnail() ) : ?>

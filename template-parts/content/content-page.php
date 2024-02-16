@@ -7,7 +7,7 @@
     	</div>		
 
     <!--content-->
-    <section class="container mt-3 mt-md-5 ">
+    <section class="container mt-3 mt-md-5 mb-3">
         <article class="col-md-12">
             <div class="content">
                 <?php the_content(); ?>
